@@ -25,6 +25,7 @@
             background-color: var(--light);
             color: var(--dark);
             line-height: 1.6;
+            padding-top: 80px; /* Added buffer for header */
         }
         
         header {
@@ -38,6 +39,7 @@
             display: flex;
             justify-content: space-between;
             align-items: center;
+            height: 80px; /* Fixed height */
         }
         
         .logo-container {
@@ -151,6 +153,24 @@
             margin-top: 3rem;
         }
         
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin: 1rem 0;
+        }
+        
+        .social-links a {
+            color: var(--white);
+            font-size: 1.5rem;
+            transition: all 0.3s ease;
+        }
+        
+        .social-links a:hover {
+            transform: translateY(-3px);
+            color: rgba(255, 255, 255, 0.8);
+        }
+        
         @media (max-width: 768px) {
             .hero-content {
                 padding: 1.5rem;
@@ -211,14 +231,22 @@
                 <a href="mailto:info@techdesignconcept.com" class="btn">
                     <i class="fas fa-envelope"></i> Email Us
                 </a>
-                <a href="https://calendly.com/your-link" target="_blank" class="btn">
-                    <i class="far fa-calendar-alt"></i> Schedule a Meeting
+                <a href="mailto:info@techdesignconcept.com?subject=Meeting%20Request:%20Azure%20Consulting&body=Hello%20Tech%20Design%20Concept%20team,%0A%0AI%20would%20like%20to%20schedule%20a%20meeting%20to%20discuss%20your%20cloud%20consulting%20services.%0A%0APreferred%20Date/Time:%20%0AProject%20Details:%20%0A%0AThank%20you,%0A%0A" class="btn">
+                    <i class="far fa-calendar-alt"></i> Request Meeting
                 </a>
             </div>
         </div>
     </section>
     
     <footer>
+        <div class="social-links">
+            <a href="https://linkedin.com/company/tech-design-concept" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+            </a>
+            <a href="https://github.com/techdesignconcept" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+            </a>
+        </div>
         <p>&copy; 2025 Tech Design Concept Pty Ltd. All rights reserved.</p>
     </footer>
 </body>
