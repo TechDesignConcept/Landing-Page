@@ -5,6 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Tech Design Concept Pty Ltd - Azure & Cloud Consulting</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' https://source.unsplash.com data:; font-src https://cdnjs.cloudflare.com; connect-src 'self';">
+    <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
+    <meta http-equiv="X-Content-Type-Options" content="nosniff">
+    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
+    <!-- Upcoming Headers -->
+    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
+    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
+    <meta http-equiv="Cross-Origin-Resource-Policy" content="same-site">
     <style>
         :root {
             --primary: #0078D4;
@@ -269,10 +279,15 @@
             
             header {
                 height: 70px;
+                justify-content: center; /* Center the logo when button is hidden */
             }
             
             .company-name {
                 display: none; /* Hide company name on very small screens */
+            }
+            
+            header .btn {
+                display: none; /* Hide the Get in Touch button at same breakpoint */
             }
             
             .logo {
