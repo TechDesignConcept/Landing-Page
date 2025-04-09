@@ -301,6 +301,14 @@
                 margin: 0 auto;
             }
         }
+
+        /* Desktop specific styles to ensure elements remain visible */
+        @media screen and (min-width: 481px) {
+            .company-name, 
+            header .btn {
+                display: block; /* Explicitly ensure these are visible on larger screens */
+            }
+        }
     </style>
 </head>
 <body>
