@@ -89,6 +89,15 @@
             border-top: 4px solid var(--primary);
         }
         
+        .hero-image {
+            max-width: 100%;
+            height: auto;
+            margin-bottom: 1.5rem;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
         h1 {
             color: var(--primary);
             margin-bottom: 1.5rem;
@@ -184,61 +193,6 @@
             transform: translateY(-3px);
             color: rgba(255, 255, 255, 0.8);
         }
-        
-        @media (max-width: 768px) {
-            .hero-content {
-                padding: 1.5rem;
-                width: 90%;
-            }
-            
-            h1 {
-                font-size: 2rem;
-            }
-            
-            .company-name {
-                font-size: 1.2rem;
-                max-width: 200px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            
-            .logo {
-                height: 40px;
-            }
-            
-            .services {
-                flex-direction: column;
-            }
-            
-            .contact-options {
-                flex-direction: column;
-                width: 100%;
-            }
-            
-            .btn {
-                width: 100%;
-                justify-content: center;
-            }
-            
-            header {
-                padding: 0.5rem;
-            }
-            
-            .company-name {
-                max-width: 200px;
-                overflow: hidden;
-                text-overflow: ellipsis;
-            }
-            
-            .social-links {
-                gap: 2rem;
-            }
-            
-            .social-links a {
-                font-size: 1.8rem;
-                padding: 10px;
-            }
-        }
 
         /* Small screen styles (mobile and small tablets) */
         @media screen and (max-width: 480px) {
@@ -299,7 +253,7 @@
 
     <section class="hero">
         <div class="hero-content">
-            <h1>Tech Design Concept Pty Ltd</h1>
+            <img src="imgs/LandingPageImage.png" alt="Tech Design Concept" class="hero-image">
             <p class="tagline">Your Trusted Partner for Expert Azure and Cloud Consulting Services</p>
             <p>Empowering businesses to transform with reliable, scalable, and secure cloud solutions tailored to your specific needs.</p>
             
