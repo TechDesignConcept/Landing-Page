@@ -240,37 +240,7 @@
             }
         }
 
-        /* iPhone specific fixes */
-        @media screen and (max-width: 428px) { /* iPhone 13 Pro Max width */
-            body {
-                padding-top: 70px;
-            }
-            
-            header {
-                height: 70px;
-            }
-            
-            .hero-content {
-                padding: 1.2rem;
-                width: 95%;
-                margin: 0 auto;
-            }
-            
-            h1 {
-                font-size: 1.8rem;
-            }
-            
-            p {
-                font-size: 1rem;
-            }
-            
-            .btn {
-                padding: 10px 15px;
-                font-size: 0.95rem;
-            }
-        }
-
-        /* iPhone specific fixes - Updated for better Edge compatibility */
+        /* Small screen styles (mobile and small tablets) */
         @media screen and (max-width: 480px) {
             body {
                 padding-top: 70px;
@@ -278,15 +248,15 @@
             
             header {
                 height: 70px;
-                justify-content: center; /* Center the logo when button is hidden */
+                justify-content: center;
             }
             
             .company-name {
-                display: none !important; /* Force hide company name on small screens */
+                display: none; /* Hide company name on small screens */
             }
             
             header .btn {
-                display: none !important; /* Force hide the Get in Touch button */
+                display: none; /* Hide the Get in Touch button */
             }
             
             .logo {
@@ -306,6 +276,14 @@
             .company-name, 
             header .btn {
                 display: block !important; /* Force ensure these are visible on larger screens */
+            }
+            
+            header {
+                justify-content: space-between; /* Properly space items on desktop */
+            }
+            
+            .logo-container {
+                justify-content: flex-start;
             }
         }
     </style>
