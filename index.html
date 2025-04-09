@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Tech Design Concept Pty Ltd - Azure & Cloud Consulting</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
@@ -21,11 +21,13 @@
         }
         
         body {
-            font-family: 'Segoe UI', Arial, sans-serif;
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
             background-color: var(--light);
             color: var(--dark);
             line-height: 1.6;
             padding-top: 80px; /* Added buffer for header */
+            width: 100%;
+            overflow-x: hidden;
         }
         
         header {
@@ -59,17 +61,18 @@
         }
         
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 0 20px;
+            padding: 20px;
             background: linear-gradient(rgba(244, 247, 252, 0.9), rgba(244, 247, 252, 0.9)), url('https://source.unsplash.com/random/1600x900/?cloud,technology') center/cover no-repeat;
         }
         
         .hero-content {
             max-width: 800px;
+            width: 100%;
             background: var(--white);
             padding: 2.5rem;
             border-radius: 10px;
@@ -126,7 +129,7 @@
         }
         
         .btn {
-            display: inline-block;
+            display: inline-flex;
             background-color: var(--primary);
             color: var(--white);
             padding: 12px 25px;
@@ -134,9 +137,11 @@
             text-decoration: none;
             font-weight: bold;
             transition: all 0.3s ease;
-            display: flex;
             align-items: center;
             gap: 8px;
+            white-space: nowrap;
+            justify-content: center;
+            -webkit-tap-highlight-color: transparent;
         }
         
         .btn:hover {
@@ -174,6 +179,7 @@
         @media (max-width: 768px) {
             .hero-content {
                 padding: 1.5rem;
+                width: 90%;
             }
             
             h1 {
@@ -190,6 +196,65 @@
             
             .services {
                 flex-direction: column;
+            }
+            
+            .contact-options {
+                flex-direction: column;
+                width: 100%;
+            }
+            
+            .btn {
+                width: 100%;
+                justify-content: center;
+            }
+            
+            header {
+                padding: 0.5rem;
+            }
+            
+            .company-name {
+                max-width: 200px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            
+            .social-links {
+                gap: 2rem;
+            }
+            
+            .social-links a {
+                font-size: 1.8rem;
+                padding: 10px;
+            }
+        }
+
+        /* iPhone specific fixes */
+        @media screen and (max-width: 428px) { /* iPhone 13 Pro Max width */
+            body {
+                padding-top: 70px;
+            }
+            
+            header {
+                height: 70px;
+            }
+            
+            .hero-content {
+                padding: 1.2rem;
+                width: 95%;
+                margin: 0 auto;
+            }
+            
+            h1 {
+                font-size: 1.8rem;
+            }
+            
+            p {
+                font-size: 1rem;
+            }
+            
+            .btn {
+                padding: 10px 15px;
+                font-size: 0.95rem;
             }
         }
     </style>
