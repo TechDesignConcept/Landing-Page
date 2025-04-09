@@ -188,6 +188,9 @@
             
             .company-name {
                 font-size: 1.2rem;
+                max-width: 200px;
+                overflow: hidden;
+                text-overflow: ellipsis;
             }
             
             .logo {
@@ -255,6 +258,32 @@
             .btn {
                 padding: 10px 15px;
                 font-size: 0.95rem;
+            }
+        }
+
+        /* iPhone specific fixes */
+        @media screen and (max-width: 480px) {
+            body {
+                padding-top: 70px;
+            }
+            
+            header {
+                height: 70px;
+            }
+            
+            .company-name {
+                display: none; /* Hide company name on very small screens */
+            }
+            
+            .logo {
+                height: 40px;
+                margin-right: 0;
+            }
+            
+            .hero-content {
+                padding: 1.2rem;
+                width: 95%;
+                margin: 0 auto;
             }
         }
     </style>
