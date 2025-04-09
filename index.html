@@ -5,13 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Tech Design Concept Pty Ltd - Azure & Cloud Consulting</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Security Headers -->
+    
+    <!-- 
+    IMPORTANT: These meta security headers are only for testing/development purposes.
+    For production, implement these as actual HTTP headers via:
+    1. For GitHub Pages: Use Cloudflare or similar CDN service that allows custom HTTP headers
+    2. For custom servers: Configure in server settings (.htaccess for Apache, web.config for IIS, etc.)
+    3. For Azure Static Web Apps: Use the staticwebapp.config.json file
+    
+    None of these meta tags below are currently being served as actual HTTP headers based on your request data.
+    -->
+    <!-- Security Headers (Development Only) -->
     <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' https://source.unsplash.com data:; font-src https://cdnjs.cloudflare.com; connect-src 'self';">
     <meta http-equiv="X-Frame-Options" content="SAMEORIGIN">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-    <!-- Upcoming Headers -->
+    <!-- Upcoming Headers (Development Only) -->
     <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
     <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
     <meta http-equiv="Cross-Origin-Resource-Policy" content="same-site">
@@ -306,7 +316,7 @@
 <body>
     <header>
         <div class="logo-container">
-            <img src="TDC-Logo.png" alt="Tech Design Concept Logo" class="logo">
+            <img src="imgs/TDC-Logo.png" alt="Tech Design Concept Logo" class="logo">
             <div class="company-name">Tech Design Concept</div>
         </div>
         <a href="#contact" class="btn">Get in Touch</a>
