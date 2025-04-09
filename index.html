@@ -271,7 +271,7 @@
             }
         }
 
-        /* iPhone specific fixes */
+        /* iPhone specific fixes - Updated for better Edge compatibility */
         @media screen and (max-width: 480px) {
             body {
                 padding-top: 70px;
@@ -283,11 +283,11 @@
             }
             
             .company-name {
-                display: none; /* Hide company name on very small screens */
+                display: none !important; /* Force hide company name on small screens */
             }
             
             header .btn {
-                display: none; /* Hide the Get in Touch button at same breakpoint */
+                display: none !important; /* Force hide the Get in Touch button */
             }
             
             .logo {
@@ -306,7 +306,7 @@
         @media screen and (min-width: 481px) {
             .company-name, 
             header .btn {
-                display: block; /* Explicitly ensure these are visible on larger screens */
+                display: block !important; /* Force ensure these are visible on larger screens */
             }
         }
     </style>
