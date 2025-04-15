@@ -1,0 +1,12 @@
+/* TEAM */
+Creator: Tech Design Concept Team
+Contact: info@techdesignconcept.com
+Website: https://techdesignconcept.com
+From: Brisbane, Australia
+
+/* SITE */
+Last update: 2025-04-15
+Language: English
+Doctype: HTML5
+Technology: HTML5, CSS3, JavaScript, Jekyll, Ruby
+IDE: Visual Studio Code

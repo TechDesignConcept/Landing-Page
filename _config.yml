@@ -1,0 +1,49 @@
+# Site settings
+title: Tech Design Concept
+email: contact@techdesignconcept.com
+description: Your Trusted Partner for Expert Azure and Cloud Consulting Services
+baseurl: "" # the subpath of your site, e.g. /blog
+url: "" # the base hostname & protocol for your site
+
+# Build settings
+markdown: kramdown
+permalink: /blog/:title/
+
+# Collections
+collections:
+  posts:
+    output: true
+    permalink: /blog/:title/
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+# Exclude from processing
+exclude:
+  - README.md
+  - CNAME
+  - howto/
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata
+
+# Default front matter
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default
+  - scope:
+      path: "_posts"
+    values:
+      layout: post

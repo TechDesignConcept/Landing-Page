@@ -1,0 +1,40 @@
+---
+layout: default
+---
+<article class="blog-post">
+    <div class="container">
+        <h1>{{ page.title }}</h1>
+        <div class="post-meta">
+            <span class="post-date">
+                <i class="fas fa-calendar-alt"></i> {{ page.date | date: "%B %d, %Y" }}
+            </span>
+            {% if page.author %}
+            <span class="post-author">
+                <i class="fas fa-user"></i> {{ page.author }}
+            </span>
+            {% endif %}
+            {% if page.tags.size > 0 %}
+            <div class="post-tags">
+                <i class="fas fa-tags"></i>
+                {% for tag in page.tags %}
+                <span class="tag">{{ tag }}</span>
+                {% endfor %}
+            </div>
+            {% endif %}
+        </div>
+        
+        <div class="post-content">
+            {{ content }}
+        </div>
+        
+        <div class="share-post">
+            <h3>Share this post</h3>
+            <a href="https://twitter.com/intent/tweet?url={{ page.url | absolute_url }}&text={{ page.title }}" target="_blank" class="share-button twitter">
+                <i class="fab fa-twitter"></i> Twitter
+            </a>
+            <a href="https://www.linkedin.com/shareArticle?mini=true&url={{ page.url | absolute_url }}&title={{ page.title }}" target="_blank" class="share-button linkedin">
+                <i class="fab fa-linkedin"></i> LinkedIn
+            </a>
+        </div>
+    </div>
+</article>

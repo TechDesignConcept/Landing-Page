@@ -1,301 +1,40 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>Tech Design Concept Pty Ltd - Azure & Cloud Consulting</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <!-- Security Headers (Development Only) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' https://source.unsplash.com data:; font-src https://cdnjs.cloudflare.com; connect-src 'self';">
-    <meta http-equiv="X-Content-Type-Options" content="nosniff">
-    <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
-    <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
-    <!-- Upcoming Headers (Development Only) -->
-    <meta http-equiv="Cross-Origin-Embedder-Policy" content="require-corp">
-    <meta http-equiv="Cross-Origin-Opener-Policy" content="same-origin">
-    <meta http-equiv="Cross-Origin-Resource-Policy" content="same-site">
-    <style>
-        :root {
-            --primary: #0078D4;
-            --primary-dark: #005a9e;
-            --light: #f4f7fc;
-            --dark: #333;
-            --white: #fff;
-        }
-        
-        * {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-        }
-        
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Arial, sans-serif;
-            background-color: var(--light);
-            color: var(--dark);
-            line-height: 1.6;
-            padding-top: 90px; /* Added buffer for header */
-            width: 100%;
-            overflow-x: hidden;
-        }
-        
-        header {
-            background-color: var(--white);
-            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-            padding: 1rem;
-            position: fixed;
-            width: 100%;
-            top: 0;
-            z-index: 100;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            height: 80px; /* Fixed height */
-        }
-        
-        .logo-container {
-            display: flex;
-            align-items: center;
-        }
-        
-        .logo {
-            height: 50px;
-            margin-right: 15px;
-        }
-        
-        .company-name {
-            color: var(--dark);
-            font-size: 1.5rem;
-            font-weight: bold;
-        }
-        
-        .hero {
-            min-height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            padding: 20px;
-            background: linear-gradient(rgba(244, 247, 252, 0.9), rgba(244, 247, 252, 0.9)), url('https://source.unsplash.com/random/1600x900/?cloud,technology') center/cover no-repeat;
-        }
-        
-        .hero-content {
-            max-width: 800px;
-            width: 100%;
-            background: var(--white);
-            padding: 2.5rem;
-            border-radius: 10px;
-            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-            border-top: 4px solid var(--primary);
-        }
-        
-        .hero-image {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 1.5rem;
-            display: block;
-            margin-left: auto;
-            margin-right: auto;
-        }
-        
-        h1 {
-            color: var(--primary);
-            margin-bottom: 1.5rem;
-            font-size: 2.5rem;
-        }
-        
-        .tagline {
-            font-size: 1.25rem;
-            margin-bottom: 1.5rem;
-            color: var(--primary-dark);
-        }
-        
-        p {
-            font-size: 1.1rem;
-            margin-bottom: 1.5rem;
-        }
-        
-        .services {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 2rem 0;
-            flex-wrap: wrap;
-        }
-        
-        .service {
-            background: rgba(0, 120, 212, 0.05);
-            padding: 1rem;
-            border-radius: 8px;
-            flex: 1;
-            min-width: 200px;
-            border-left: 3px solid var(--primary);
-        }
-        
-        .service i {
-            color: var(--primary);
-            font-size: 1.5rem;
-            margin-bottom: 0.5rem;
-        }
-        
-        .contact-options {
-            display: flex;
-            justify-content: center;
-            gap: 1rem;
-            margin-top: 2rem;
-            flex-wrap: wrap;
-        }
-        
-        .btn {
-            display: inline-flex;
-            background-color: var(--primary);
-            color: var(--white);
-            padding: 12px 25px;
-            border-radius: 5px;
-            text-decoration: none;
-            font-weight: bold;
-            transition: all 0.3s ease;
-            align-items: center;
-            gap: 8px;
-            white-space: nowrap;
-            justify-content: center;
-            -webkit-tap-highlight-color: transparent;
-        }
-        
-        .btn:hover {
-            background-color: var(--primary-dark);
-            transform: translateY(-2px);
-            box-shadow: 0 5px 15px rgba(0, 90, 158, 0.3);
-        }
-        
-        footer {
-            background-color: var(--primary);
-            color: var(--white);
-            text-align: center;
-            padding: 0.1rem;
-            margin-top: 1rem;
-        }
-        
-        .social-links {
-            display: flex;
-            justify-content: center;
-            gap: 1.5rem;
-            margin: 0.5rem 0;
-        }
-        
-        .social-links a {
-            color: var(--white);
-            font-size: 1.5rem;
-            transition: all 0.3s ease;
-        }
-        
-        .social-links a:hover {
-            transform: translateY(-3px);
-            color: rgba(255, 255, 255, 0.8);
-        }
+---
+layout: default
+title: Home
+description: Tech Design Concept - Your Trusted Partner for Expert Azure and Cloud Consulting Services
+---
 
-        /* Small screen styles (mobile and small tablets) */
-        @media screen and (max-width: 522px) {
-            body {
-                padding-top: 70px;
-            }
-            
-            header {
-                height: 70px;
-                justify-content: center;
-            }
-            
-            .company-name {
-                display: none; /* Hide company name on small screens */
-            }
-            
-            header .btn {
-                display: none; /* Hide the Get in Touch button */
-            }
-            
-            .logo {
-                height: 40px;
-                margin-right: 0;
-            }
-            
-            .hero-content {
-                padding: 1.2rem;
-                width: 95%;
-                margin: 0 auto;
-            }
-        }
-
-        /* Desktop specific styles to ensure elements remain visible */
-        @media screen and (min-width: 522px) {
-            .company-name, 
-            header .btn {
-                display: block !important; /* Force ensure these are visible on larger screens */
-            }
-            
-            header {
-                justify-content: space-between; /* Properly space items on desktop */
-            }
-            
-            .logo-container {
-                justify-content: flex-start;
-            }
-        }
-    </style>
-</head>
-<body>
-    <header>
-        <div class="logo-container">
-            <img src="imgs/TDC-Logo.png" alt="Tech Design Concept Logo" class="logo">
-            <div class="company-name">Tech Design Concept</div>
-        </div>
-        <a href="#contact" class="btn">Get in Touch</a>
-    </header>
-
-    <section class="hero">
-        <div class="hero-content">
-            <img src="imgs/LandingPageImage.png" alt="Tech Design Concept" class="hero-image">
-            <p class="tagline">Your Trusted Partner for Expert Azure and Cloud Consulting Services</p>
-            <p>Empowering businesses to transform with reliable, scalable, and secure cloud solutions tailored to your specific needs.</p>
-            
-            <div class="services">
-                <div class="service">
-                    <i class="fas fa-cloud"></i>
-                    <h3>Cloud Migration</h3>
-                    <p>Seamless transition of your workloads to Azure</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-shield-alt"></i>
-                    <h3>Security Solutions</h3>
-                    <p>Robust protection for your cloud infrastructure</p>
-                </div>
-                <div class="service">
-                    <i class="fas fa-cogs"></i>
-                    <h3>DevOps & Automation</h3>
-                    <p>Streamline your development and operations</p>
-                </div>
+<section class="hero">
+    <div class="hero-content">
+        <img src="/assets/imgs/LandingPageImage.png" alt="Tech Design Concept" class="hero-image">
+        <p class="tagline">Your Trusted Partner for Expert Azure and Cloud Consulting Services</p>
+        <p>Empowering businesses to transform with reliable, scalable, and secure cloud solutions tailored to your specific needs.</p>
+        
+        <div class="services">
+            <div class="service">
+                <i class="fas fa-cloud"></i>
+                <h3>Cloud Migration</h3>
+                <p>Seamless transition of your workloads to Azure</p>
             </div>
-            
-            <div id="contact" class="contact-options">
-                <a href="mailto:info@techdesignconcept.com" class="btn">
-                    <i class="fas fa-envelope"></i> Email Us
-                </a>
-                <a href="mailto:info@techdesignconcept.com?subject=Meeting%20Request:%20Azure%20Consulting&body=Hello%20Tech%20Design%20Concept%20team,%0A%0AI%20would%20like%20to%20schedule%20a%20meeting%20to%20discuss%20your%20cloud%20consulting%20services.%0A%0APreferred%20Date/Time:%20%0AProject%20Details:%20%0A%0AThank%20you,%0A%0A" class="btn">
-                    <i class="far fa-calendar-alt"></i> Request Meeting
-                </a>
+            <div class="service">
+                <i class="fas fa-shield-alt"></i>
+                <h3>Security Solutions</h3>
+                <p>Robust protection for your cloud infrastructure</p>
+            </div>
+            <div class="service">
+                <i class="fas fa-cogs"></i>
+                <h3>DevOps & Automation</h3>
+                <p>Streamline your development and operations</p>
             </div>
         </div>
-    </section>
-    
-    <footer>
-        <div class="social-links">
-            <a href="https://linkedin.com/company/tech-design-concept" target="_blank" title="LinkedIn">
-                <i class="fab fa-linkedin"></i>
+        
+        <div id="contact" class="contact-options">
+            <a href="mailto:info@techdesignconcept.com" class="btn">
+                <i class="fas fa-envelope"></i> Email Us
             </a>
-            <a href="https://github.com/techdesignconcept" target="_blank" title="GitHub">
-                <i class="fab fa-github"></i>
+            <a href="mailto:info@techdesignconcept.com?subject=Meeting%20Request:%20Azure%20Consulting&body=Hello%20Tech%20Design%20Concept%20team,%0A%0AI%20would%20like%20to%20schedule%20a%20meeting%20to%20discuss%20your%20cloud%20consulting%20services.%0A%0APreferred%20Date/Time:%20%0AProject%20Details:%20%0A%0AThank%20you,%0A%0A" class="btn">
+                <i class="far fa-calendar-alt"></i> Request Meeting
             </a>
         </div>
-        <p>&copy; 2025 Tech Design Concept Pty Ltd. All rights reserved.</p>
-    </footer>
-</body>
-</html>
+    </div>
+</section>

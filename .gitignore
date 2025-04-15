@@ -1,0 +1,23 @@
+# Jekyll build files
+_site/
+.sass-cache/
+.jekyll-cache/
+.jekyll-metadata
+
+# Ruby environment
+.bundle/
+vendor/
+
+# Local development
+.DS_Store
+*.log
+node_modules/
+*.swp
+*~
+
+# Sensitive information
+.env
+.env.*
+
+# Build artifacts
+dist/

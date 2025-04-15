@@ -1,0 +1,60 @@
+---
+layout: default
+title: Blog
+description: Latest insights, news, and resources on Azure and Cloud technology from Tech Design Concept
+---
+
+<div class="page-header">
+    <div class="container">
+        <h1>Cloud Technology Blog</h1>
+        <p class="page-description">Insights, best practices, and expert advice on Azure and cloud technologies</p>
+    </div>
+</div>
+
+<div class="container">
+    <div class="blog-posts">
+        {% for post in site.posts %}
+        <div class="blog-card">
+            {% if post.image %}
+            <div class="blog-card-image">
+                <img src="{{ post.image }}" alt="{{ post.title }}">
+            </div>
+            {% endif %}
+            <div class="blog-card-content">
+                <div class="blog-card-meta">
+                    <i class="fas fa-calendar-alt"></i> {{ post.date | date: "%B %d, %Y" }}
+                    {% if post.author %}
+                    <span class="blog-author">
+                        <i class="fas fa-user"></i> {{ post.author }}
+                    </span>
+                    {% endif %}
+                </div>
+                <h3 class="blog-card-title">{{ post.title }}</h3>
+                <div class="blog-card-excerpt">{{ post.excerpt | strip_html | truncatewords: 30 }}</div>
+                <a href="{{ post.url }}" class="btn blog-card-link">Read More</a>
+            </div>
+        </div>
+        {% endfor %}
+        
+        {% if site.posts.size == 0 %}
+        <div class="text-center" style="width: 100%; padding: 3rem 0;">
+            <h3>Coming Soon!</h3>
+            <p>We're working on our first blog posts. Check back soon for expert insights on Azure and cloud technologies.</p>
+        </div>
+        {% endif %}
+    </div>
+    
+    <section class="text-center mb-3 mt-3">
+        <h2>Subscribe to Our Newsletter</h2>
+        <p>Stay updated with our latest insights, news, and resources.</p>
+        <form action="404.html" method="POST" class="contact-form" style="max-width: 500px; margin: 0 auto; padding: 1.5rem;">
+            <div class="form-group">
+                <label for="email" class="form-label">Email Address</label>
+                <input type="email" id="email" name="_replyto" class="form-control" required>
+            </div>
+            <button type="submit" class="btn">
+                <i class="fas fa-envelope"></i> Subscribe
+            </button>
+        </form>
+    </section>
+</div>

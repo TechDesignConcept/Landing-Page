@@ -1,0 +1,38 @@
+<header class="site-header">
+    <div class="container">
+        <div class="logo-container">
+            <a href="/" class="logo-link" style="text-decoration: none;">
+                <img src="/assets/imgs/TDC-Logo.png" alt="Tech Design Concept Logo" class="logo">
+                <div class="company-name">Tech Design Concept</div>
+            </a>
+        </div>
+        <nav class="main-nav">
+            <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">
+                <span class="sr-only">Toggle Menu</span>
+                <i class="fas fa-bars"></i>
+            </button>
+            <ul id="main-menu" class="menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/about/">About</a></li>
+                <li><a href="/services/">Services</a></li>
+                <li><a href="/blog/">Blog</a></li>
+                <li><a href="/contact/">Contact</a></li>
+            </ul>
+        </nav>
+        <a href="/contact/" class="btn header-cta">Get in Touch</a>
+    </div>
+</header>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const menuToggle = document.querySelector('.menu-toggle');
+        const mainMenu = document.getElementById('main-menu');
+        
+        if (menuToggle && mainMenu) {
+            menuToggle.addEventListener('click', function() {
+                const expanded = this.getAttribute('aria-expanded') === 'true' || false;
+                this.setAttribute('aria-expanded', !expanded);
+                mainMenu.classList.toggle('active');
+            });
+        }
+    });
+</script>
