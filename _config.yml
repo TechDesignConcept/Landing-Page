@@ -1,6 +1,6 @@
 # Site settings
 title: Tech Design Concept
-email: contact@techdesignconcept.com
+email: info@techdesignconcept.com
 description: Your Trusted Partner for Expert Azure and Cloud Consulting Services
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "https://techdesignconcept.com/" # the base hostname & protocol for your site

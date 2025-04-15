@@ -60,7 +60,7 @@ bundle install
 bundle exec jekyll serve
 ```
 
-4. View the site at `http://localhost:4000`
+4. View the site at `https://techdesignconcept.com`
 
 ## Deployment
 
