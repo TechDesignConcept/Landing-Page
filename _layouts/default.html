@@ -14,8 +14,8 @@
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }} Feed" href="/feed.xml" />
     
-    <!-- Security Headers (Modified to allow Font Awesome) -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' https://source.unsplash.com data:; font-src 'self' https://cdnjs.cloudflare.com https://use.fontawesome.com data:; connect-src 'self';">
+    <!-- Security Headers (Modified to allow Font Awesome and our scripts) -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' https://source.unsplash.com data:; font-src 'self' https://cdnjs.cloudflare.com https://use.fontawesome.com data:; connect-src 'self';">
     <meta http-equiv="X-Content-Type-Options" content="nosniff">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=()">
@@ -24,6 +24,8 @@
     <meta http-equiv="Cross-Origin-Resource-Policy" content="same-site">
     
     {% seo title=false %}
+    <!-- Add menu.js script -->
+    <script src="/assets/js/menu.js"></script>
 </head>
 <body>
     {% include header.html %}
