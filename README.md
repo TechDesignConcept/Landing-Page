@@ -4,7 +4,7 @@ This repository contains the source code for the Tech Design Concept company web
 
 ## Overview
 
-This responsive landing page showcases Tech Design Concept's cloud consulting services with a modern, clean design optimized for all devices. The site features a professional appearance with Azure-inspired color schemes and intuitive navigation.
+This responsive landing page showcases Tech Design Concept's cloud consulting services with a modern, clean design optimised for all devices. The site features a professional appearance with Azure-inspired color schemes and intuitive navigation.
 
 ## Website Structure
 
@@ -19,9 +19,9 @@ The website follows a standard Jekyll structure:
 
 ## Features
 
-- **Responsive Design**: Optimized for desktop, tablet, and mobile devices
+- **Responsive Design**: Optimised for desktop, tablet, and mobile devices
 - **Modern UI**: Clean, professional interface with Azure-inspired aesthetics
-- **Performance Optimized**: Fast loading with optimized assets
+- **Performance Optimised**: Fast loading with optimised assets
 - **SEO Ready**: Structured for search engine visibility
 - **Security Enhanced**: Implements recommended security headers:
   - Content-Security-Policy
