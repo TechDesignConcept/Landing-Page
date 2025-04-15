@@ -899,6 +899,40 @@ textarea.form-control {
     }
 }
 
+/* Mobile menu styles */
+@media (max-width: 768px) {
+    .menu {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        background: #fff;
+        box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+        z-index: 100;
+        padding: 10px 0;
+    }
+    
+    .menu.active {
+        display: block;
+    }
+    
+    .menu li {
+        display: block;
+        margin: 0;
+        padding: 0;
+    }
+    
+    .menu li a {
+        display: block;
+        padding: 10px 20px;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+}
+
 @media screen and (max-width: 522px) {
     body {
         padding-top: 70px;

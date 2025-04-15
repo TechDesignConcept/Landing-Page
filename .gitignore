@@ -14,7 +14,7 @@ vendor/
 node_modules/
 *.swp
 *~
-.Gemfile.lock
+Gemfile.lock
 
 # Sensitive information
 .env
