@@ -22,3 +22,6 @@ Gemfile.lock
 
 # Build artifacts
 dist/
+
+# Superpowers brainstorming mockups
+.superpowers/
