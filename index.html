@@ -1,40 +1,128 @@
 ---
 layout: default
 title: Home
-description: Tech Design Concept - Your Trusted Partner for Expert Azure and Cloud Consulting Services
+description: Tech Design Concept — Azure & cloud consulting, engineered by specialists.
 ---
 
 <section class="hero">
-    <div class="hero-content">
-        <img src="/assets/imgs/LandingPageImage.png" alt="Tech Design Concept" class="hero-image">
-        <p class="tagline">Your Trusted Partner for Expert Azure and Cloud Consulting Services</p>
-        <p>Empowering businesses to transform with reliable, scalable, and secure cloud solutions tailored to your specific needs.</p>
-        
-        <div class="services">
-            <div class="service">
-                <i class="fas fa-cloud"></i>
-                <h3>Cloud Migration</h3>
-                <p>Seamless transition of your workloads to Azure</p>
-            </div>
-            <div class="service">
-                <i class="fas fa-shield-alt"></i>
-                <h3>Security Solutions</h3>
-                <p>Robust protection for your cloud infrastructure</p>
-            </div>
-            <div class="service">
-                <i class="fas fa-cogs"></i>
-                <h3>DevOps & Automation</h3>
-                <p>Streamline your development and operations</p>
+    <div class="container">
+        <div class="hero-copy reveal">
+            <p class="eyebrow">Tech Design Concept</p>
+            <h1>Cloud infrastructure, engineered.</h1>
+            <p class="lede">Azure consulting for teams that want quality engineering, not slide decks. We design, implement, and hand over cloud platforms built for the long run.</p>
+            <div class="hero-ctas">
+                <a href="/contact/" class="btn btn-lg">Start a conversation</a>
+                <a href="/work/" class="btn btn-secondary btn-lg">See our work</a>
             </div>
         </div>
-        
-        <div id="contact" class="contact-options">
-            <a href="mailto:info@techdesignconcept.com" class="btn">
-                <i class="fas fa-envelope"></i> Email Us
+        <div class="hero-visual reveal">
+            <div class="glow"></div>
+            {% include hero-visual.html %}
+        </div>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container-wide">
+        {% include marquee.html %}
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        <p class="eyebrow">What we do</p>
+        <h2 class="mb-6">Three core capabilities.</h2>
+        <div class="grid-3">
+            <a href="/services/#cloud-migration" class="card card-service reveal" style="text-decoration:none;color:inherit">
+                <span class="icon-tile"><i class="fas fa-cloud" aria-hidden="true"></i></span>
+                <h3>Cloud Migration</h3>
+                <p>Assess, plan, and execute Azure migrations that cut risk and deliver measurable outcomes.</p>
+                <span class="btn-ghost">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
             </a>
-            <a href="mailto:info@techdesignconcept.com?subject=Meeting%20Request:%20Azure%20Consulting&body=Hello%20Tech%20Design%20Concept%20team,%0A%0AI%20would%20like%20to%20schedule%20a%20meeting%20to%20discuss%20your%20cloud%20consulting%20services.%0A%0APreferred%20Date/Time:%20%0AProject%20Details:%20%0A%0AThank%20you,%0A%0A" class="btn">
-                <i class="far fa-calendar-alt"></i> Request Meeting
+            <a href="/services/#security-solutions" class="card card-service reveal" style="text-decoration:none;color:inherit">
+                <span class="icon-tile"><i class="fas fa-shield-halved" aria-hidden="true"></i></span>
+                <h3>Security Solutions</h3>
+                <p>Defence-in-depth architectures using Defender, Sentinel, Entra, and Azure Policy.</p>
+                <span class="btn-ghost">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
             </a>
+            <a href="/services/#devops-automation" class="card card-service reveal" style="text-decoration:none;color:inherit">
+                <span class="icon-tile"><i class="fas fa-gears" aria-hidden="true"></i></span>
+                <h3>DevOps &amp; Automation</h3>
+                <p>CI/CD, Infrastructure as Code (Bicep, Terraform), and platform engineering that scales.</p>
+                <span class="btn-ghost">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
+            </a>
+        </div>
+    </div>
+</section>
+
+{% assign featured = site.case_studies | where: 'featured', true | first %}
+{% unless featured %}{% assign featured = site.case_studies | first %}{% endunless %}
+{% if featured %}
+<section class="section">
+    <div class="container">
+        <p class="eyebrow">Featured engagement</p>
+        <article class="card card-case-study reveal">
+            <div>
+                <div class="meta-row">
+                    <span class="tag">{{ featured.industry }}</span>
+                    <span class="tag">{{ featured.duration }}</span>
+                    {% for s in featured.services %}<span class="tag">{{ s }}</span>{% endfor %}
+                </div>
+                <h3>{{ featured.title }}</h3>
+                <p>{{ featured.summary }}</p>
+                <a href="{{ featured.url }}" class="btn-ghost">Read the case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+            </div>
+            <div>
+                <div class="stat-row">
+                    {% for m in featured.metrics %}
+                        {% assign parts = m | split: '|' %}
+                        <div class="stat">
+                            <span class="stat-number" data-count data-target="{{ parts[0] }}" data-suffix="{{ parts[1] }}">{{ parts[0] }}{{ parts[1] }}</span>
+                            <span class="stat-label">{{ parts[2] }}</span>
+                        </div>
+                    {% endfor %}
+                </div>
+            </div>
+        </article>
+    </div>
+</section>
+{% endif %}
+
+<section class="section">
+    <div class="container">
+        <p class="eyebrow">How we work</p>
+        <h2 class="mb-6">A four-step engagement.</h2>
+        <div class="steps">
+            <div class="step reveal"><span class="step-num">01 — Discover</span><h3>Understand</h3><p>Deep dive into your environment, constraints, and goals.</p></div>
+            <div class="step reveal"><span class="step-num">02 — Design</span><h3>Architect</h3><p>Target-state architecture and a staged migration plan.</p></div>
+            <div class="step reveal"><span class="step-num">03 — Implement</span><h3>Deliver</h3><p>Hands-on-keyboard execution with continuous validation.</p></div>
+            <div class="step reveal"><span class="step-num">04 — Enable</span><h3>Hand over</h3><p>Your team owns the platform, with the skills to run it.</p></div>
+        </div>
+    </div>
+</section>
+
+{% assign recent = site.posts | slice: 0, 3 %}
+{% if recent.size > 0 %}
+<section class="section">
+    <div class="container">
+        <p class="eyebrow">Recent writing</p>
+        <h2 class="mb-6">From the blog.</h2>
+        <div class="grid-3">
+            {% for post in recent %}
+                {% include blog-card.html post=post %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endif %}
+
+<section class="cta-band">
+    <div class="container">
+        <h2>Ready to build something well?</h2>
+        <p class="lede">Let's scope your next Azure engagement.</p>
+        <div class="cluster">
+            <a href="/contact/" class="btn btn-lg">Get in touch</a>
+            <a href="/services/" class="btn btn-secondary btn-lg">Browse services</a>
         </div>
     </div>
 </section>
