@@ -14,6 +14,9 @@ collections:
   posts:
     output: true
     permalink: /blog/:title/
+  case_studies:
+    output: true
+    permalink: /work/:slug/
 
 # Plugins
 plugins:
@@ -47,3 +50,8 @@ defaults:
       path: "_posts"
     values:
       layout: post
+  - scope:
+      path: ""
+      type: "case_studies"
+    values:
+      layout: case-study
