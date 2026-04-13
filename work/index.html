@@ -1,0 +1,41 @@
+---
+layout: default
+title: Work
+description: Recent Azure engagements by Tech Design Concept.
+---
+
+<section class="page-header">
+    <div class="container">
+        <p class="eyebrow">Work</p>
+        <h1>Recent engagements.</h1>
+        <p class="lede">A selection of projects — some anonymised, all real.</p>
+    </div>
+</section>
+
+<section class="section">
+    <div class="container">
+        {% if site.case_studies.size == 0 %}
+            <div class="card text-center" style="padding:var(--space-9)">
+                <h3>Case studies coming soon</h3>
+                <p>We're writing these up. Meanwhile, get in touch to hear about relevant engagements in person.</p>
+                <a href="/contact/" class="btn mt-4">Get in touch</a>
+            </div>
+        {% else %}
+            <div class="stack">
+                {% for study in site.case_studies %}
+                    {% include case-study-card.html study=study %}
+                {% endfor %}
+            </div>
+        {% endif %}
+    </div>
+</section>
+
+<section class="cta-band">
+    <div class="container">
+        <h2>Got a project in mind?</h2>
+        <p class="lede">Tell us about it.</p>
+        <div class="cluster">
+            <a href="/contact/" class="btn btn-lg">Start a conversation</a>
+        </div>
+    </div>
+</section>

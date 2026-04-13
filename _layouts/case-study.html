@@ -1,0 +1,46 @@
+---
+layout: default
+---
+<section class="page-header">
+    <div class="container" style="max-width:880px">
+        <p class="eyebrow">
+            <a href="/work/" style="color:inherit">← All work</a>
+        </p>
+        <div class="meta-row" style="margin-bottom:var(--space-5)">
+            {% if page.industry %}<span class="tag">{{ page.industry }}</span>{% endif %}
+            {% if page.duration %}<span class="tag">{{ page.duration }}</span>{% endif %}
+            {% for s in page.services %}<span class="tag">{{ s }}</span>{% endfor %}
+        </div>
+        <h1>{{ page.title }}</h1>
+        {% if page.summary %}<p class="lede">{{ page.summary }}</p>{% endif %}
+        {% if page.client %}<p style="color:var(--text-2);font-family:var(--font-mono);font-size:0.8125rem">{{ page.client }}</p>{% endif %}
+
+        {% if page.metrics %}
+        <div class="stat-row" style="margin-top:var(--space-6)">
+            {% for m in page.metrics %}
+                {% assign parts = m | split: '|' %}
+                <div class="stat">
+                    <span class="stat-number" data-count data-target="{{ parts[0] }}" data-suffix="{{ parts[1] }}">{{ parts[0] }}{{ parts[1] }}</span>
+                    <span class="stat-label">{{ parts[2] }}</span>
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</section>
+
+<section class="section">
+    <div class="container" style="max-width:760px">
+        <div class="post-content">{{ content }}</div>
+    </div>
+</section>
+
+<section class="cta-band">
+    <div class="container">
+        <h2>Similar project in mind?</h2>
+        <div class="cluster">
+            <a href="/contact/" class="btn btn-lg">Get in touch</a>
+            <a href="/work/" class="btn btn-secondary btn-lg">More case studies</a>
+        </div>
+    </div>
+</section>

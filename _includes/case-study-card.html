@@ -1,0 +1,25 @@
+<article class="card card-case-study reveal">
+    <div>
+        <div class="meta-row">
+            {% if include.study.industry %}<span class="tag">{{ include.study.industry }}</span>{% endif %}
+            {% if include.study.duration %}<span class="tag">{{ include.study.duration }}</span>{% endif %}
+            {% for s in include.study.services %}<span class="tag">{{ s }}</span>{% endfor %}
+        </div>
+        <h3>{{ include.study.title }}</h3>
+        <p>{{ include.study.summary }}</p>
+        <a href="{{ include.study.url }}" class="btn-ghost">Read case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+    </div>
+    <div>
+        {% if include.study.metrics %}
+        <div class="stat-row">
+            {% for m in include.study.metrics %}
+                {% assign parts = m | split: '|' %}
+                <div class="stat">
+                    <span class="stat-number" data-count data-target="{{ parts[0] }}" data-suffix="{{ parts[1] }}">{{ parts[0] }}{{ parts[1] }}</span>
+                    <span class="stat-label">{{ parts[2] }}</span>
+                </div>
+            {% endfor %}
+        </div>
+        {% endif %}
+    </div>
+</article>
