@@ -26,4 +26,4 @@ dist/
 # Superpowers brainstorming mockups
 .superpowers/
 .claude
-docs/
+docs
