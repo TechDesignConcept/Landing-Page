@@ -1,31 +1,34 @@
 ---
-title: "Fintech lift-and-shift to Azure"
-client: "Confidential — tier-1 financial services"
-industry: "Financial Services"
-duration: "8 weeks"
+title: "BHP — OZ Minerals application integration"
+client: "BHP"
+industry: "Mining & Resources"
+duration: "8 months"
 services:
   - Cloud Migration
+  - DevOps & Automation
   - Security
-summary: "Two hundred VMs migrated to Azure with zero production downtime, cutting infrastructure cost by a third and establishing the platform foundation for all future workloads."
+summary: "Integrated 112+ applications from the OZ Minerals acquisition into BHP's Azure estate in eight months, with a standardised landing-zone pattern that cut downstream tracking errors by 70%."
 featured: true
 metrics:
-  - "200|+|VMs migrated"
-  - "0|%|production downtime"
-  - "32|%|cost reduction"
+  - "112|+|applications integrated"
+  - "8|mo|end-to-end delivery"
+  - "70|%|fewer tracking errors"
 ---
 
 ## Challenge
 
-Our client, a tier-1 financial services provider, was running a sprawling on-premise VMware estate that couldn't keep pace with their product roadmap. Capacity planning was manual, disaster recovery was untested, and every new workload took weeks of infrastructure lead time. They had committed to Azure but needed a partner to make the migration actually happen — not just plan it.
+Following BHP's acquisition of OZ Minerals, more than 112 business applications needed to be lifted out of the OZ Minerals environment and integrated into BHP's Azure estate — on a tight programme deadline, under strict security and compliance controls, and without disrupting operational systems across active mining sites.
+
+The inherited estate was heterogeneous: a mix of legacy VM workloads, SaaS integrations, and application-specific networking requirements. Each app had its own owner, its own release cadence, and its own definition of "done."
 
 ## Approach
 
-We ran a four-week discovery phase, mapping every workload, dependency, and failover path. Workloads were clustered into migration waves and each cluster went through a standard track: landing-zone preparation, pilot migration on a non-critical subset, full wave migration, and stabilisation.
+We designed a repeatable landing-zone pattern in Bicep aligned to the Azure Verified Modules standard, so every migrated application dropped into a known-good security and networking baseline. Identity was consolidated on Entra ID, with Conditional Access and Defender for Cloud enabled across every in-scope subscription from day one.
 
-Security was built in from the start — identity was re-architected on Entra ID with Conditional Access policies, Defender for Cloud was enabled across every subscription from day one, and Azure Policy enforced baseline controls (tagging, encryption, diagnostic settings) on every deployment.
+Delivery ran on GitHub Actions pipelines promoting through dev / UAT / prod, with Azure Policy enforcing tagging, encryption, and diagnostic settings automatically. A central tracking system replaced the spreadsheet-based handover process — cutting the error rate on application status reporting by roughly 70% and giving the programme team a single source of truth.
 
-All target-state infrastructure was defined in Bicep, aligned to the Azure Verified Modules standard. CI/CD pipelines in GitHub Actions handled promotion through dev / UAT / prod environments.
+Workloads were grouped into migration waves and each wave followed the same track: discovery, landing-zone prep, pilot cutover, full cutover, and stabilisation. FinOps guardrails were built in from the start so cost anomalies surfaced immediately rather than at month-end.
 
 ## Outcome
 
-The migration completed on time with zero production downtime. Annualised infrastructure cost dropped by 32% within the first quarter of operation, and new-workload provisioning went from weeks to under an hour. The client's platform team took over ongoing operations at handover, supported by the runbooks and training we delivered.
+All 112+ applications were integrated inside the eight-month window, on time and without a material production incident. The landing-zone pattern became the reference implementation for subsequent BHP Azure work. The engagement was recognised with an internal award for programme delivery, and BHP's platform team took over operations at handover, supported by the runbooks, pipelines, and documentation we left behind.
