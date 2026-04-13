@@ -1,23 +1,23 @@
 <header class="site-header">
     <div class="container">
-        <div class="logo-container">
-            <a href="/" class="logo-link" style="text-decoration: none;">
-                <img src="/assets/imgs/TDC-Logo.png" alt="Tech Design Concept Logo" class="logo">
-            </a>
-        </div>
-        <nav class="main-nav">
+        <a href="/" class="logo-link" aria-label="Tech Design Concept home">
+            {% include logo.html %}
+            <span class="logo-wordmark">Tech Design Concept</span>
+        </a>
+        <nav class="main-nav" aria-label="Primary">
             <button class="menu-toggle" aria-expanded="false" aria-controls="main-menu">
                 <span class="sr-only">Toggle Menu</span>
-                <i class="fas fa-bars"></i>
+                <i class="fas fa-bars" aria-hidden="true"></i>
             </button>
             <ul id="main-menu" class="menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/about/">About</a></li>
-                <li><a href="/services/">Services</a></li>
-                <li><a href="/blog/">Blog</a></li>
-                <li><a href="/contact/">Contact</a></li>
+                {% assign path = page.url %}
+                <li><a href="/"         {% if path == '/' %}class="active"{% endif %}>Home</a></li>
+                <li><a href="/services/"{% if path contains '/services' %}class="active"{% endif %}>Services</a></li>
+                <li><a href="/work/"    {% if path contains '/work' %}class="active"{% endif %}>Work</a></li>
+                <li><a href="/about/"   {% if path contains '/about' %}class="active"{% endif %}>About</a></li>
+                <li><a href="/blog/"    {% if path contains '/blog' %}class="active"{% endif %}>Blog</a></li>
             </ul>
+            <a href="/contact/" class="btn btn-sm header-cta">Get in touch</a>
         </nav>
-        <a href="/contact/" class="btn header-cta">Get in Touch</a>
     </div>
 </header>
