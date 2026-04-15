@@ -46,6 +46,8 @@ description: Get in touch with Tech Design Concept to discuss your Azure engagem
                             <textarea class="form-control" id="message" name="message" required></textarea>
                         </div>
                         <input type="hidden" name="_subject" value="Tech Design Concept website inquiry">
+                        <!-- Honeypot: bots fill this; Formspree discards submissions where it is non-empty -->
+                        <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" aria-hidden="true">
                         <button type="submit" class="btn btn-lg">Send message <i class="fas fa-arrow-right" aria-hidden="true"></i></button>
                     </form>
                     <div id="contact-success" class="form-success" hidden>
