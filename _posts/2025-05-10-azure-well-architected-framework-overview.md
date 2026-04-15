@@ -2,7 +2,7 @@
 layout: post
 title: "Azure Well-Architected Framework: Building Cloud Solutions That Last"
 date: 2025-05-10
-author: "Josh"
+author: "Joshua Argy"
 image: "/assets/imgs/azure-waf-pillars.png"
 excerpt: "Learn how the Azure Well-Architected Framework helps you design and operate reliable, secure, and cost-effective cloud solutions."
 tags: [azure, well-architected-framework, waf, architecture, best-practices]
@@ -113,7 +113,7 @@ Microsoft provides several tools to help with WAF adoption:
 
 ## Conclusion
 
-The Azure Well-Architected Framework isn't just a checklist—it's a mindset for building cloud solutions that stand the test of time. By considering reliability, security, cost, operations, and performance from the outset, you can avoid costly rework and ensure your solutions deliver lasting business value.
+The Azure Well-Architected Framework isn't just a checklist -it's a mindset for building cloud solutions that stand the test of time. By considering reliability, security, cost, operations, and performance from the outset, you can avoid costly rework and ensure your solutions deliver lasting business value.
 
 At Tech Design Concept, we conduct Well-Architected assessments and help organisations implement improvements across all five pillars. [Contact us](/contact/) to schedule a review of your Azure workloads.
 

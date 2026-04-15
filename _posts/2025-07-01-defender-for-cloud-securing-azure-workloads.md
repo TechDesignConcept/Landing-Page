@@ -2,7 +2,7 @@
 layout: post
 title: "Microsoft Defender for Cloud: Securing Your Azure Workloads"
 date: 2025-07-01
-author: "Josh"
+author: "Joshua Argy"
 image: "/assets/imgs/defender-for-cloud.png"
 excerpt: "Explore how Microsoft Defender for Cloud provides comprehensive security posture management and threat protection for your Azure environment."
 tags: [azure, security, defender, cspm, threat-protection]

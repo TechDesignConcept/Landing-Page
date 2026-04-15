@@ -2,7 +2,7 @@
 layout: post
 title: "Azure Landing Zones: Your Foundation for Enterprise Cloud Adoption"
 date: 2025-05-20
-author: "Josh"
+author: "Joshua Argy"
 image: "/assets/imgs/azure-landing-zones.png"
 excerpt: "Understand how Azure Landing Zones from the Cloud Adoption Framework provide a scalable, secure foundation for enterprise workloads."
 tags: [azure, caf, cloud-adoption-framework, landing-zones, enterprise]
@@ -22,7 +22,7 @@ A Landing Zone is a pre-configured Azure environment that provides:
 - **Security baseline** with Microsoft Defender and logging
 - **Cost management** through budgets and alerts
 
-Think of it as the infrastructure equivalent of a well-prepared building site—everything is ready for construction to begin safely and efficiently.
+Think of it as the infrastructure equivalent of a well-prepared building site -everything is ready for construction to begin safely and efficiently.
 
 ## The CAF Landing Zone Architecture
 
@@ -94,7 +94,7 @@ When implementing Landing Zones, you'll need to make several important decisions
 
 ## Subscription Vending
 
-One of the most powerful patterns in Landing Zones is subscription vending—automating the creation and configuration of new subscriptions.
+One of the most powerful patterns in Landing Zones is subscription vending -automating the creation and configuration of new subscriptions.
 
 ### Benefits of subscription vending:
 - **Consistency** across all deployed subscriptions

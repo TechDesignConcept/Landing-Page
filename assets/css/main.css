@@ -160,6 +160,7 @@ p {
     color: var(--text-1);
     font-size: 1rem;
     line-height: 1.65;
+    margin-bottom: var(--space-5);
 }
 
 p.lede {
@@ -203,6 +204,7 @@ pre code { background: transparent; padding: 0; }
 ul, ol {
     color: var(--text-1);
     padding-left: 1.5rem;
+    margin-top: var(--space-5);
     margin-bottom: var(--space-5);
 }
 li { margin-bottom: var(--space-2); }
@@ -399,6 +401,14 @@ main { min-height: calc(100vh - 200px); }
 .card:hover {
     border-color: var(--border-strong);
     transform: translateY(-2px);
+}
+
+/* Icon tile — centered flexbox for icons */
+.icon-tile {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent);
 }
 
 /* Service card — icon + title + body + link */
@@ -865,4 +875,52 @@ select.form-control {
 .reveal.is-revealed { opacity: 1; transform: none; }
 @media (prefers-reduced-motion: reduce) {
     .reveal { opacity: 1; transform: none; }
+}
+
+/* Services page sticky side nav (desktop only, floats on the right) */
+.services-nav {
+    position: fixed;
+    top: 50%;
+    right: var(--space-4);
+    transform: translateY(-50%);
+    padding: var(--space-4) 0;
+    border-left: 1px solid var(--border);
+    font-size: 0.8125rem;
+    background: var(--surface-1, transparent);
+    z-index: 20;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+.services-nav .services-nav-label {
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    font-size: 0.75rem;
+    color: var(--text-2);
+    padding: 0 var(--space-4);
+    margin-bottom: var(--space-3);
+}
+.services-nav ol { list-style: none; margin: 0; padding: 0; counter-reset: svc; }
+.services-nav li { counter-increment: svc; }
+.services-nav a {
+    display: block;
+    padding: var(--space-2) var(--space-4);
+    color: var(--text-2);
+    text-decoration: none;
+    border-left: 2px solid transparent;
+    margin-left: -1px;
+    transition: color 200ms var(--ease), border-color 200ms var(--ease), background 200ms var(--ease);
+}
+.services-nav a::before {
+    content: counter(svc, decimal-leading-zero) "  ";
+    color: var(--text-3, var(--text-2));
+    font-variant-numeric: tabular-nums;
+}
+.services-nav a:hover { color: var(--text-1); }
+.services-nav a.is-active {
+    color: var(--accent);
+    border-left-color: var(--accent);
+    background: var(--surface-2, transparent);
+}
+@media (max-width: 1400px) {
+    .services-nav { display: none; }
 }

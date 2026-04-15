@@ -23,7 +23,35 @@ Gemfile.lock
 # Build artifacts
 dist/
 
-# Superpowers brainstorming mockups
+# Internal / private working files (do not publish)
 .superpowers/
-.claude
-docs
+.claude/
+.claude.json
+.claude.local.json
+docs/
+graphify-out/
+CLAUDE.md
+CLAUDE.local.md
+.auto-memory/
+memory/
+TASKS.md
+NOTES.md
+*.private.md
+*.internal.md
+
+# Editor / IDE
+.vscode/
+.idea/
+*.code-workspace
+
+# OS junk
+Thumbs.db
+desktop.ini
+
+# Secrets / credentials (extra safety)
+*.pem
+*.key
+*.pfx
+*.cer
+secrets.yml
+credentials.json
