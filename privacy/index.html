@@ -4,105 +4,331 @@ title: Privacy Policy
 description: Privacy policy for Tech Design Concept.
 ---
 
-<section class="page-header">
-    <div class="container" style="max-width:760px">
-        <p class="eyebrow">Legal</p>
-        <h1>Privacy policy.</h1>
+<style>
+  .privacy-hero { padding: var(--space-16) 0 var(--space-8); }
+  .privacy-hero .meta-row {
+    display: flex; flex-wrap: wrap; gap: var(--space-3);
+    align-items: center; margin-top: var(--space-4);
+  }
+  .privacy-badge {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 6px 12px; border-radius: 999px;
+    background: rgba(255,255,255,0.06);
+    border: 1px solid rgba(255,255,255,0.12);
+    font-size: 0.85rem; color: var(--color-text-muted, #9aa4b2);
+  }
+  .privacy-badge .dot {
+    width: 8px; height: 8px; border-radius: 50%;
+    background: #22c55e; box-shadow: 0 0 0 3px rgba(34,197,94,0.15);
+  }
+
+  .privacy-layout {
+    display: grid;
+    grid-template-columns: 260px 1fr;
+    gap: var(--space-10);
+    align-items: start;
+    max-width: 1100px; margin: 0 auto;
+  }
+  @media (max-width: 900px) {
+    .privacy-layout { grid-template-columns: 1fr; gap: var(--space-6); }
+    .privacy-toc { position: static !important; }
+  }
+
+  .privacy-toc {
+    position: sticky; top: 100px;
+    padding: var(--space-5);
+    border-radius: 16px;
+    background: rgba(255,255,255,0.03);
+    border: 1px solid rgba(255,255,255,0.08);
+    backdrop-filter: blur(8px);
+  }
+  .privacy-toc h3 {
+    font-size: 0.75rem; text-transform: uppercase;
+    letter-spacing: 0.12em; margin: 0 0 var(--space-3);
+    color: var(--color-text-muted, #9aa4b2);
+  }
+  .privacy-toc ol { list-style: none; padding: 0; margin: 0; counter-reset: toc; }
+  .privacy-toc li { counter-increment: toc; margin: 2px 0; }
+  .privacy-toc a {
+    display: flex; align-items: center; gap: 10px;
+    padding: 8px 10px; border-radius: 10px;
+    font-size: 0.9rem; text-decoration: none;
+    color: var(--color-text, #e6e9ef);
+    transition: background 0.15s, color 0.15s, transform 0.15s;
+  }
+  .privacy-toc a::before {
+    content: counter(toc, decimal-leading-zero);
+    font-size: 0.7rem; font-variant-numeric: tabular-nums;
+    color: var(--color-text-muted, #9aa4b2);
+    min-width: 22px;
+  }
+  .privacy-toc a:hover {
+    background: rgba(255,255,255,0.06);
+    transform: translateX(2px);
+  }
+  .privacy-toc a.active {
+    background: rgba(59,130,246,0.12);
+    color: #fff;
+  }
+
+  .privacy-cards { display: flex; flex-direction: column; gap: var(--space-5); }
+  .privacy-card {
+    position: relative;
+    padding: var(--space-6) var(--space-7);
+    border-radius: 18px;
+    background: linear-gradient(180deg, rgba(255,255,255,0.04), rgba(255,255,255,0.02));
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: border-color 0.2s, transform 0.2s;
+    scroll-margin-top: 100px;
+  }
+  .privacy-card:hover {
+    border-color: rgba(255,255,255,0.16);
+  }
+  .privacy-card .card-head {
+    display: flex; align-items: center; gap: var(--space-3);
+    margin-bottom: var(--space-4);
+  }
+  .privacy-card .icon {
+    width: 40px; height: 40px; flex: none;
+    display: grid; place-items: center;
+    border-radius: 12px;
+    background: rgba(59,130,246,0.12);
+    border: 1px solid rgba(59,130,246,0.25);
+    font-size: 1.15rem;
+  }
+  .privacy-card h2 {
+    margin: 0; font-size: 1.35rem; line-height: 1.3;
+  }
+  .privacy-card p, .privacy-card li { line-height: 1.7; }
+  .privacy-card ul { padding-left: 1.2rem; }
+  .privacy-card ul li { margin: 4px 0; }
+  .privacy-card a { color: #60a5fa; }
+
+  .privacy-footer-note {
+    margin-top: var(--space-8);
+    padding: var(--space-5) var(--space-6);
+    border-radius: 14px;
+    border: 1px dashed rgba(255,255,255,0.15);
+    color: var(--color-text-muted, #9aa4b2);
+    font-size: 0.9rem;
+    text-align: center;
+  }
+</style>
+
+<section class="page-header privacy-hero">
+  <div class="container" style="max-width:1100px">
+    <p class="eyebrow">Legal</p>
+    <h1>Privacy policy.</h1>
+    <p class="lede">How Tech Design Concept collects, uses, and protects your information.</p>
+    <div class="meta-row">
+      <span class="privacy-badge"><span class="dot"></span> Last updated April 15, 2025</span>
+      <span class="privacy-badge">Tech Design Concept Pty Ltd</span>
+      <span class="privacy-badge">Australia</span>
     </div>
+  </div>
 </section>
 
 <section class="section">
-    <div class="container" style="max-width:760px">
-        <div class="post-content">
-            <p>Last Updated: April 15, 2025</p>
+  <div class="container" style="max-width:1100px">
+    <div class="privacy-layout">
 
+      <aside class="privacy-toc" aria-label="On this page">
+        <h3>On this page</h3>
+        <ol>
+          <li><a href="#introduction">Introduction</a></li>
+          <li><a href="#information-we-collect">Information we collect</a></li>
+          <li><a href="#automatic">Automatically collected</a></li>
+          <li><a href="#how-we-use">How we use it</a></li>
+          <li><a href="#cookies">Cookies &amp; tracking</a></li>
+          <li><a href="#sharing">Sharing your information</a></li>
+          <li><a href="#security">Data security</a></li>
+          <li><a href="#rights">Your privacy rights</a></li>
+          <li><a href="#children">Children's privacy</a></li>
+          <li><a href="#changes">Changes to this policy</a></li>
+          <li><a href="#contact">Contact us</a></li>
+        </ol>
+      </aside>
+
+      <div class="privacy-cards">
+
+        <article class="privacy-card" id="introduction">
+          <div class="card-head">
+            <div class="icon">📘</div>
             <h2>Introduction</h2>
-            <p>Tech Design Concept Pty Ltd ("Tech Design Concept," "we," "our," or "us") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website techdesignconcept.com (the "Website") or engage with our services.</p>
-            <p>Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the Website or use our services.</p>
+          </div>
+          <p>Tech Design Concept Pty Ltd ("Tech Design Concept," "we," "our," or "us") respects your privacy and is committed to protecting your personal data. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website techdesignconcept.com (the "Website") or engage with our services.</p>
+          <p>Please read this Privacy Policy carefully. If you do not agree with the terms of this Privacy Policy, please do not access the Website or use our services.</p>
+        </article>
 
-            <h2>Information We Collect</h2>
-            <p>We collect information that you voluntarily provide to us when you:</p>
-            <ul>
-                <li>Register on the Website</li>
-                <li>Express interest in obtaining information about us or our services</li>
-                <li>Participate in activities on the Website (such as posting comments or completing forms)</li>
-                <li>Contact us</li>
-            </ul>
+        <article class="privacy-card" id="information-we-collect">
+          <div class="card-head">
+            <div class="icon">📝</div>
+            <h2>Information we collect</h2>
+          </div>
+          <p>We collect information that you voluntarily provide to us when you:</p>
+          <ul>
+            <li>Register on the Website</li>
+            <li>Express interest in obtaining information about us or our services</li>
+            <li>Participate in activities on the Website (such as posting comments or completing forms)</li>
+            <li>Contact us</li>
+          </ul>
+          <p>The personal information we collect may include:</p>
+          <ul>
+            <li>Name</li>
+            <li>Email address</li>
+            <li>Phone number</li>
+            <li>Company name and job title</li>
+            <li>Message content when you contact us</li>
+          </ul>
+        </article>
 
-            <p>The personal information we collect may include:</p>
-            <ul>
-                <li>Name</li>
-                <li>Email address</li>
-                <li>Phone number</li>
-                <li>Company name and job title</li>
-                <li>Message content when you contact us</li>
-            </ul>
+        <article class="privacy-card" id="automatic">
+          <div class="card-head">
+            <div class="icon">📡</div>
+            <h2>Automatically collected information</h2>
+          </div>
+          <p>When you visit our Website, we may automatically collect certain information about your device, including:</p>
+          <ul>
+            <li>IP address</li>
+            <li>Browser type and version</li>
+            <li>Operating system</li>
+            <li>Time spent on pages</li>
+            <li>Links clicked</li>
+            <li>Pages visited</li>
+          </ul>
+          <p>This information helps us understand how visitors use our Website and improve user experience.</p>
+        </article>
 
-            <h2>Automatically Collected Information</h2>
-            <p>When you visit our Website, we may automatically collect certain information about your device, including:</p>
-            <ul>
-                <li>IP address</li>
-                <li>Browser type and version</li>
-                <li>Operating system</li>
-                <li>Time spent on pages</li>
-                <li>Links clicked</li>
-                <li>Pages visited</li>
-            </ul>
-            <p>This information helps us understand how visitors use our Website and improve user experience.</p>
+        <article class="privacy-card" id="how-we-use">
+          <div class="card-head">
+            <div class="icon">⚙️</div>
+            <h2>How we use your information</h2>
+          </div>
+          <p>We use the information we collect for various purposes, including to:</p>
+          <ul>
+            <li>Provide, operate, and maintain our Website and services</li>
+            <li>Improve and personalise your experience</li>
+            <li>Understand how you use our Website</li>
+            <li>Develop new products, services, and features</li>
+            <li>Communicate with you, including for customer service and providing updates</li>
+            <li>Send you marketing and promotional communications (with your consent)</li>
+            <li>Monitor and analyze usage patterns and trends</li>
+            <li>Protect against, identify, and prevent fraud and other illegal activity</li>
+          </ul>
+        </article>
 
-            <h2>How We Use Your Information</h2>
-            <p>We use the information we collect for various purposes, including to:</p>
-            <ul>
-                <li>Provide, operate, and maintain our Website and services</li>
-                <li>Improve and personalise your experience</li>
-                <li>Understand how you use our Website</li>
-                <li>Develop new products, services, and features</li>
-                <li>Communicate with you, including for customer service and providing updates</li>
-                <li>Send you marketing and promotional communications (with your consent)</li>
-                <li>Monitor and analyze usage patterns and trends</li>
-                <li>Protect against, identify, and prevent fraud and other illegal activity</li>
-            </ul>
+        <article class="privacy-card" id="cookies">
+          <div class="card-head">
+            <div class="icon">🍪</div>
+            <h2>Cookies and tracking technologies</h2>
+          </div>
+          <p>We use cookies and similar tracking technologies to track activity on our Website and store certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier.</p>
+          <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Website.</p>
+        </article>
 
-            <h2>Cookies and Tracking Technologies</h2>
-            <p>We use cookies and similar tracking technologies to track activity on our Website and store certain information. Cookies are files with a small amount of data which may include an anonymous unique identifier.</p>
-            <p>You can instruct your browser to refuse all cookies or to indicate when a cookie is being sent. However, if you do not accept cookies, you may not be able to use some portions of our Website.</p>
+        <article class="privacy-card" id="sharing">
+          <div class="card-head">
+            <div class="icon">🤝</div>
+            <h2>Sharing your information</h2>
+          </div>
+          <p>We may share your information with:</p>
+          <ul>
+            <li><strong>Service Providers:</strong> Third-party vendors who perform services on our behalf (e.g., payment processing, data analysis, email delivery)</li>
+            <li><strong>Business Partners:</strong> With your consent, we may share your information with our business partners to offer you certain products or services</li>
+            <li><strong>Legal Requirements:</strong> If required to do so by law or in response to valid requests by public authorities</li>
+          </ul>
+        </article>
 
-            <h2>Sharing Your Information</h2>
-            <p>We may share your information with:</p>
-            <ul>
-                <li><strong>Service Providers:</strong> Third-party vendors who perform services on our behalf (e.g., payment processing, data analysis, email delivery)</li>
-                <li><strong>Business Partners:</strong> With your consent, we may share your information with our business partners to offer you certain products or services</li>
-                <li><strong>Legal Requirements:</strong> If required to do so by law or in response to valid requests by public authorities</li>
-            </ul>
+        <article class="privacy-card" id="security">
+          <div class="card-head">
+            <div class="icon">🔒</div>
+            <h2>Data security</h2>
+          </div>
+          <p>We implement appropriate technical and organisational measures to protect the security of your personal information. However, please note that no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+        </article>
 
-            <h2>Data Security</h2>
-            <p>We implement appropriate technical and organisational measures to protect the security of your personal information. However, please note that no method of transmission over the Internet or electronic storage is 100% secure, and we cannot guarantee absolute security.</p>
+        <article class="privacy-card" id="rights">
+          <div class="card-head">
+            <div class="icon">⚖️</div>
+            <h2>Your privacy rights</h2>
+          </div>
+          <p>Depending on your location, you may have certain rights regarding your personal information, such as:</p>
+          <ul>
+            <li>Right to access your personal data</li>
+            <li>Right to rectify inaccurate data</li>
+            <li>Right to request deletion of your data</li>
+            <li>Right to restrict or object to processing</li>
+            <li>Right to data portability</li>
+            <li>Right to withdraw consent</li>
+          </ul>
+          <p>To exercise these rights, please contact us using the details provided in the "Contact Us" section.</p>
+        </article>
 
-            <h2>Your Privacy Rights</h2>
-            <p>Depending on your location, you may have certain rights regarding your personal information, such as:</p>
-            <ul>
-                <li>Right to access your personal data</li>
-                <li>Right to rectify inaccurate data</li>
-                <li>Right to request deletion of your data</li>
-                <li>Right to restrict or object to processing</li>
-                <li>Right to data portability</li>
-                <li>Right to withdraw consent</li>
-            </ul>
-            <p>To exercise these rights, please contact us using the details provided in the "Contact Us" section.</p>
+        <article class="privacy-card" id="children">
+          <div class="card-head">
+            <div class="icon">👶</div>
+            <h2>Children's privacy</h2>
+          </div>
+          <p>Our Website is not intended for children under 16 years of age. We do not knowingly collect personal information from children under 16. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.</p>
+        </article>
 
-            <h2>Children's Privacy</h2>
-            <p>Our Website is not intended for children under 16 years of age. We do not knowingly collect personal information from children under 16. If you are a parent or guardian and believe your child has provided us with personal information, please contact us.</p>
+        <article class="privacy-card" id="changes">
+          <div class="card-head">
+            <div class="icon">🔄</div>
+            <h2>Changes to this privacy policy</h2>
+          </div>
+          <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
+          <p>We encourage you to review this Privacy Policy periodically for any changes.</p>
+        </article>
 
-            <h2>Changes to This Privacy Policy</h2>
-            <p>We may update our Privacy Policy from time to time. We will notify you of any changes by posting the new Privacy Policy on this page and updating the "Last Updated" date.</p>
-            <p>We encourage you to review this Privacy Policy periodically for any changes.</p>
+        <article class="privacy-card" id="contact">
+          <div class="card-head">
+            <div class="icon">✉️</div>
+            <h2>Contact us</h2>
+          </div>
+          <p>If you have any questions about this Privacy Policy, please contact us:</p>
+          <ul>
+            <li>By email: <a href="mailto:privacy@techdesignconcept.com">privacy@techdesignconcept.com</a></li>
+            <li>By visiting the contact page on our website: <a href="/contact/">Contact Us</a></li>
+          </ul>
+        </article>
 
-            <h2>Contact Us</h2>
-            <p>If you have any questions about this Privacy Policy, please contact us:</p>
-            <ul>
-                <li>By email: <a href="mailto:privacy@techdesignconcept.com">privacy@techdesignconcept.com</a></li>
-                <li>By visiting the contact page on our website: <a href="/contact/">Contact Us</a></li>
-            </ul>
+        <div class="privacy-footer-note">
+          Tech Design Concept Pty Ltd &middot; Australia &middot; Committed to protecting your data.
         </div>
+
+      </div>
     </div>
+  </div>
 </section>
+
+<script>
+  (function () {
+    var links = document.querySelectorAll('.privacy-toc a');
+    var sections = Array.from(links).map(function (a) {
+      return document.querySelector(a.getAttribute('href'));
+    }).filter(Boolean);
+
+    function onScroll() {
+      var pos = window.scrollY + 140;
+      var current = sections[0];
+      sections.forEach(function (s) { if (s.offsetTop <= pos) current = s; });
+      links.forEach(function (a) {
+        a.classList.toggle('active', a.getAttribute('href') === '#' + current.id);
+      });
+    }
+    document.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    links.forEach(function (a) {
+      a.addEventListener('click', function (e) {
+        var target = document.querySelector(a.getAttribute('href'));
+        if (target) {
+          e.preventDefault();
+          window.scrollTo({ top: target.offsetTop - 90, behavior: 'smooth' });
+          history.pushState(null, '', a.getAttribute('href'));
+        }
+      });
+    });
+  })();
+</script>

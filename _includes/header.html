@@ -13,6 +13,7 @@
                 {% assign path = page.url %}
                 <li><a href="/"         {% if path == '/' %}class="active"{% endif %}>Home</a></li>
                 <li><a href="/services/"{% if path contains '/services' %}class="active"{% endif %}>Services</a></li>
+                <li><a href="/rate-card/"{% if path contains '/rate-card' or path contains '/offers' %}class="active"{% endif %}>Pricing</a></li>
                 <li><a href="/work/"    {% if path contains '/work' %}class="active"{% endif %}>Work</a></li>
                 <li><a href="/about/"   {% if path contains '/about' %}class="active"{% endif %}>About</a></li>
                 <li><a href="/blog/"    {% if path contains '/blog' %}class="active"{% endif %}>Blog</a></li>

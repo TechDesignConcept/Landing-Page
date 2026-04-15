@@ -24,11 +24,11 @@ The website follows a standard Jekyll structure:
 - **Performance Optimised**: Fast loading with optimised assets
 - **SEO Ready**: Structured for search engine visibility
 - **Security Enhanced**: Implements recommended security headers:
-  - Content-Security-Policy
-  - X-Frame-Options
-  - X-Content-Type-Options
-  - Referrer-Policy
-  - Permissions-Policy
+ - Content-Security-Policy
+ - X-Frame-Options
+ - X-Content-Type-Options
+ - Referrer-Policy
+ - Permissions-Policy
 
 ## Technologies
 

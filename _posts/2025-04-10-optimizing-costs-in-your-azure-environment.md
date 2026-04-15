@@ -2,7 +2,7 @@
 layout: post
 title: "Optimising Costs in Your Azure Environment: 7 Practical Tips"
 date: 2025-04-10
-author: "Josh"
+author: "Joshua Argy"
 image: "/assets/imgs/495292b3-8c8f-42af-a3b7-7e219413277c.png"
 excerpt: "Discover proven strategies to optimise your Azure cloud costs without compromising performance or security."
 tags: [azure, cost-optimisation, cloud-economics, best-practices]

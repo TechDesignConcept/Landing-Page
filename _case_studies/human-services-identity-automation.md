@@ -1,23 +1,23 @@
 ---
-title: "Human services NFP — identity lifecycle automation"
-client: "Confidential — national not-for-profit"
+title: "Human services NFP - identity lifecycle automation"
+client: "Confidential - national not-for-profit"
 industry: "Not-for-Profit · Human Services"
 duration: "6 weeks"
 services:
-  - Security
-  - DevOps & Automation
+ - Security
+ - DevOps & Automation
 summary: "Automated end-to-end identity lifecycle for a national human-services NFP, sourcing joiners, movers, and leavers from the HRM system and provisioning Entra ID, Jira, and line-of-business access without manual tickets."
 metrics:
-  - "5|+|systems automated"
-  - "100|%|HRM-driven provisioning"
-  - "0|%|manual tickets remaining"
+ - "5|+|systems automated"
+ - "100|%|HRM-driven provisioning"
+ - "0|%|manual tickets remaining"
 ---
 
 ## Challenge
 
 A national not-for-profit delivering human services across hundreds of sites was spending hours every week processing access change tickets by hand. Joiners waited days for accounts, leavers kept access after termination, and the HR team and IT team had no shared source of truth for who should have what.
 
-Audit findings flagged identity hygiene as a compliance risk. The NFP needed a durable fix — not another person hired into the ticket queue.
+Audit findings flagged identity hygiene as a compliance risk. The NFP needed a durable fix - not another person hired into the ticket queue.
 
 ## Approach
 

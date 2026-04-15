@@ -1,16 +1,16 @@
 ---
-title: "National agricultural authority — data platform migration"
-client: "Confidential — Commonwealth statutory authority"
+title: "National agricultural authority - data platform migration"
+client: "Confidential - Commonwealth statutory authority"
 industry: "Government · Agriculture"
 duration: "3 months"
 services:
-  - Data Solutions
-  - Cloud Migration
-summary: "Migrated a national agricultural authority's reporting databases to Azure SQL and built automated ETL pipelines feeding Power BI — replacing hand-run VBA exports with a scheduled, observable data platform."
+ - Data Solutions
+ - Cloud Migration
+summary: "Migrated a national agricultural authority's reporting databases to Azure SQL and built automated ETL pipelines feeding Power BI - replacing hand-run VBA exports with a scheduled, observable data platform."
 metrics:
-  - "4|+|data sources integrated"
-  - "6|×|Power BI dashboards"
-  - "100|%|automated ETL"
+ - "4|+|data sources integrated"
+ - "6|×|Power BI dashboards"
+ - "100|%|automated ETL"
 ---
 
 ## Challenge
@@ -27,4 +27,4 @@ Log Analytics captured pipeline health, and alerting surfaced failed runs before
 
 ## Outcome
 
-Reports that previously depended on a single person now regenerate themselves on schedule. Data accessibility improved across the authority's analytical teams, and the reporting burden on operational staff dropped substantially. The platform has continued to extend — new data sources bolt onto the same ADF/ SQL/ Power BI pattern rather than spawning new tooling.
+Reports that previously depended on a single person now regenerate themselves on schedule. Data accessibility improved across the authority's analytical teams, and the reporting burden on operational staff dropped substantially. The platform has continued to extend - new data sources bolt onto the same ADF/ SQL/ Power BI pattern rather than spawning new tooling.

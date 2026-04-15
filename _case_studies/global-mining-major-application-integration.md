@@ -1,23 +1,23 @@
 ---
-title: "Global mining major — post-acquisition application integration"
-client: "Confidential — ASX-listed resources company"
+title: "Global mining major - post-acquisition application integration"
+client: "Confidential - ASX-listed resources company"
 industry: "Mining & Resources"
 duration: "8 months"
 services:
-  - Cloud Migration
-  - DevOps & Automation
-  - Security
+ - Cloud Migration
+ - DevOps & Automation
+ - Security
 summary: "Integrated 112+ business applications from an acquired subsidiary into the parent Azure estate in eight months, using a standardised landing-zone pattern that cut downstream tracking errors by roughly 70%."
 featured: true
 metrics:
-  - "112|+|applications integrated"
-  - "8|mo|end-to-end delivery"
-  - "70|%|fewer tracking errors"
+ - "112|+|applications integrated"
+ - "8|mo|end-to-end delivery"
+ - "70|%|fewer tracking errors"
 ---
 
 ## Challenge
 
-Following a major acquisition, more than 112 business applications had to be lifted out of the subsidiary's environment and integrated into the parent group's Azure estate — on a tight programme deadline, under strict security and compliance controls, and without disrupting operational systems across active industrial sites.
+Following a major acquisition, more than 112 business applications had to be lifted out of the subsidiary's environment and integrated into the parent group's Azure estate - on a tight programme deadline, under strict security and compliance controls, and without disrupting operational systems across active industrial sites.
 
 The inherited estate was heterogeneous: a mix of legacy VM workloads, SaaS integrations, and application-specific networking requirements. Each application had its own owner, its own release cadence, and its own definition of "done."
 

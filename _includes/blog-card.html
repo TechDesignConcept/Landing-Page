@@ -3,7 +3,7 @@
         <h3>{{ include.post.title }}</h3>
     </div>
     <div class="card-post-body">
-        <span class="meta">{{ include.post.date | date: '%b %d, %Y' }}{% if include.post.author %} — {{ include.post.author }}{% endif %}</span>
+        <span class="meta">{{ include.post.date | date: '%b %d, %Y' }}{% if include.post.author %} - {{ include.post.author }}{% endif %}</span>
         <p>{{ include.post.excerpt | strip_html | truncatewords: 22 }}</p>
     </div>
 </a>

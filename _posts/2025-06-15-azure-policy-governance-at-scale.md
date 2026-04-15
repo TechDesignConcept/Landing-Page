@@ -2,7 +2,7 @@
 layout: post
 title: "Azure Policy: Implementing Governance at Scale"
 date: 2025-06-15
-author: "Josh"
+author: "Joshua Argy"
 image: "/assets/imgs/azure-policy-governance.png"
 excerpt: "Learn how to use Azure Policy effectively to enforce compliance, prevent misconfigurations, and maintain governance across your Azure estate."
 tags: [azure, governance, policy, compliance, security]
@@ -10,7 +10,7 @@ tags: [azure, governance, policy, compliance, security]
 
 # Azure Policy: Implementing Governance at Scale
 
-As Azure environments grow, maintaining consistent governance becomes increasingly challenging. Azure Policy provides the mechanism to enforce organisational standards and assess compliance at scale—but only if implemented correctly.
+As Azure environments grow, maintaining consistent governance becomes increasingly challenging. Azure Policy provides the mechanism to enforce organisational standards and assess compliance at scale -but only if implemented correctly.
 
 ## Understanding Azure Policy
 

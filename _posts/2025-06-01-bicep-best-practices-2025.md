@@ -2,7 +2,7 @@
 layout: post
 title: "Bicep Best Practices in 2025: Writing Production-Ready Infrastructure Code"
 date: 2025-06-01
-author: "Josh"
+author: "Joshua Argy"
 image: "/assets/imgs/bicep-best-practices.png"
 excerpt: "Master the latest Bicep best practices to write cleaner, more maintainable Infrastructure as Code for your Azure deployments."
 tags: [azure, bicep, infrastructure-as-code, devops, best-practices]

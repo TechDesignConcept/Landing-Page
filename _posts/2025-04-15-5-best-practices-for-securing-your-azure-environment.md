@@ -2,7 +2,7 @@
 layout: post
 title: "5 Best Practices for Securing Your Azure Environment"
 date: 2025-04-15
-author: "Josh"
+author: "Joshua Argy"
 image: "/assets/imgs/a55cd087-202e-482d-a8dd-2e5c4cd13b79.png"
 excerpt: "Learn the essential security practices to protect your Azure cloud environment from evolving threats."
 tags: [azure, security, cloud, best-practices]

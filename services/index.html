@@ -1,35 +1,52 @@
 ---
 layout: default
 title: Services
-description: Azure and cloud consulting services — migration, security, DevOps, and more.
+description: Premium Azure consulting anchored in Microsoft's Cloud Adoption Framework and Well-Architected Framework. Landing zones, governance, security, FinOps, platform engineering, and AI enablement for Australian enterprise and government.
 ---
+
+<nav class="services-nav" aria-label="Services on this page">
+    <p class="services-nav-label">On this page</p>
+    <ol>
+        <li><a href="#caf-advisory">CAF Advisory</a></li>
+        <li><a href="#secure-landing-zone">Secure Landing Zone</a></li>
+        <li><a href="#well-architected-review">Well-Architected Review</a></li>
+        <li><a href="#governance">Governance and PaC</a></li>
+        <li><a href="#security">Security and IRAP</a></li>
+        <li><a href="#platform-engineering">Platform Engineering</a></li>
+        <li><a href="#finops">FinOps</a></li>
+        <li><a href="#modern-workplace">Modern Workplace and AVD</a></li>
+        <li><a href="#ai-enablement">Modern AI Enablement</a></li>
+        <li><a href="#fractional-cloud-lead">Fractional Cloud Lead</a></li>
+    </ol>
+</nav>
 
 <section class="page-header">
     <div class="container">
         <p class="eyebrow">Services</p>
-        <h1>What we do.</h1>
-        <p class="lede">End-to-end Azure consulting. Pick an engagement below or combine them into a program.</p>
+        <h1>Azure, done the Microsoft way.</h1>
+        <p class="lede">Every engagement is anchored in Microsoft's Cloud Adoption Framework (CAF) and the Azure Well-Architected Framework (WAF). You get the same reference architectures the big four deliver, without the big four overhead.</p>
+        <div class="cluster">
+            <a href="/contact/" class="btn btn-lg">Scope an engagement</a>
+            <a href="/rate-card/" class="btn btn-secondary btn-lg">See the rate card</a>
+        </div>
     </div>
 </section>
 
-<section id="cloud-migration" class="section">
+<section class="section section-alt">
     <div class="container">
+        <p class="eyebrow">Framework alignment</p>
+        <h2>Built on CAF and WAF.</h2>
+        <p class="lede">Two frameworks guide everything we ship. They are how Microsoft recommends Azure gets built, and they are the language your Microsoft account team already speaks.</p>
         <div class="grid-2">
-            <div class="reveal">
-                <p class="eyebrow">01 — Migration</p>
-                <h2>Cloud Migration</h2>
-                <p class="lede">Workloads moved to Azure with a plan that accounts for every dependency — and every user.</p>
-                <p>Rehost, refactor, rearchitect, or rebuild: the right strategy depends on the workload. We lead discovery, produce a pragmatic migration plan, and execute with you.</p>
-                <ul>
-                    <li><strong>Assessment &amp; Discovery</strong> — full environment dependency mapping</li>
-                    <li><strong>Migration Strategy</strong> — prioritised roadmap across the 5 R's</li>
-                    <li><strong>Proof of Concept</strong> — validate the approach on a representative workload</li>
-                    <li><strong>Execution</strong> — wave-based migration with continuous validation</li>
-                    <li><strong>Stabilisation</strong> — post-migration optimisation and handover</li>
-                </ul>
+            <div class="card reveal">
+                <h3><i class="fas fa-compass" aria-hidden="true"></i> Cloud Adoption Framework</h3>
+                <p>Strategy, Plan, Ready, Adopt, Govern, Manage, Secure. CAF gives us a shared playbook for moving from ambition to production without improvisation. We use it to shape roadmaps, landing zones, and operating models.</p>
+                <p><a href="https://learn.microsoft.com/en-us/azure/cloud-adoption-framework/" target="_blank" rel="noopener">learn.microsoft.com/caf</a></p>
             </div>
-            <div class="reveal text-center">
-                <span class="icon-tile" style="width:120px;height:120px;font-size:3rem"><i class="fas fa-cloud-arrow-up" aria-hidden="true"></i></span>
+            <div class="card reveal">
+                <h3><i class="fas fa-scale-balanced" aria-hidden="true"></i> Well-Architected Framework</h3>
+                <p>Reliability, Security, Cost Optimisation, Operational Excellence, Performance Efficiency. WAF is how we pressure test every workload decision against the five pillars Microsoft actually grades architecture on.</p>
+                <p><a href="https://learn.microsoft.com/en-us/azure/well-architected/" target="_blank" rel="noopener">learn.microsoft.com/well-architected</a></p>
             </div>
         </div>
     </div>
@@ -37,23 +54,150 @@ description: Azure and cloud consulting services — migration, security, DevOps
 
 <hr class="section-divider">
 
-<section id="security-solutions" class="section">
+<section id="caf-advisory" class="section">
     <div class="container">
         <div class="grid-2">
+            <div class="reveal">
+                <p class="eyebrow">01 / CAF: Strategy + Plan</p>
+                <h2>Cloud Adoption Framework Advisory</h2>
+                <p class="lede">A Microsoft aligned cloud strategy your exec team can sign, your finance team can model, and your platform team can actually build.</p>
+                <p>We run the CAF Strategy and Plan phases end to end. Business case, motivations, target state, workload rationalisation (the 6 Rs), operating model, and a 12 month roadmap that sequences landing zone, migration, governance, and skills uplift.</p>
+                <ul>
+                    <li><strong>Strategy workshop</strong>, motivations, outcomes, KPIs</li>
+                    <li><strong>Business case</strong> with TCO and run rate modelling</li>
+                    <li><strong>Portfolio rationalisation</strong> across the 6 Rs</li>
+                    <li><strong>Operating model</strong>, CCoE, RACI, ways of working</li>
+                    <li><strong>Roadmap</strong> phased over 12 to 18 months</li>
+                </ul>
+                <p><strong>Typical shape:</strong> 4 to 6 week fixed fee engagement. Exec ready deliverable.</p>
+            </div>
+            <div class="reveal text-center">
+                <span class="icon-tile" style="width:120px;height:120px;font-size:3rem"><i class="fas fa-compass" aria-hidden="true"></i></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<section id="secure-landing-zone" class="section">
+    <div class="container">
+        <div class="grid-2">
+            <div class="reveal text-center">
+                <span class="icon-tile" style="width:120px;height:120px;font-size:3rem"><i class="fas fa-layer-group" aria-hidden="true"></i></span>
+            </div>
+            <div class="reveal">
+                <p class="eyebrow">02 / CAF: Ready</p>
+                <h2>Secure Landing Zone (SLZ)</h2>
+                <p class="lede">Our flagship offer. An enterprise grade Azure landing zone, built to CAF and ALZ reference architecture, delivered in 3 weeks for a fixed A$55k.</p>
+                <p>Hub and spoke or Virtual WAN, management groups, policy baseline, identity, connectivity, logging, and a Bicep (or Terraform) codebase deployed through GitHub Actions. Built on Azure Verified Modules so you inherit Microsoft's own quality bar.</p>
+                <ul>
+                    <li><strong>Management group</strong> hierarchy and subscription vending</li>
+                    <li><strong>Policy as Code</strong> baseline, Essential 8 aligned</li>
+                    <li><strong>Hub networking</strong>, Firewall, Bastion, Private DNS</li>
+                    <li><strong>Identity</strong>, Entra ID, PIM, Conditional Access baseline</li>
+                    <li><strong>Observability</strong>, Log Analytics, Defender, Sentinel ready</li>
+                </ul>
+                <p><strong>Typical shape:</strong> Fixed price A$55,000, 3 weeks. <a href="/offers/secure-landing-zone/">See the offer</a>.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<section id="well-architected-review" class="section">
+    <div class="container">
+        <div class="grid-2">
+            <div class="reveal">
+                <p class="eyebrow">03 / WAF: All five pillars</p>
+                <h2>Well-Architected Review</h2>
+                <p class="lede">A structured review of a workload against the five WAF pillars, with a ranked remediation backlog you can hand straight to delivery.</p>
+                <p>We run the Microsoft Well-Architected Review process, score the workload across Reliability, Security, Cost Optimisation, Operational Excellence, and Performance Efficiency, then package findings into a prioritised backlog with effort estimates and a suggested delivery sequence.</p>
+                <ul>
+                    <li><strong>Pillar scoring</strong> with evidence and benchmarks</li>
+                    <li><strong>Risk register</strong> mapped to business impact</li>
+                    <li><strong>Remediation backlog</strong> sized and sequenced</li>
+                    <li><strong>Executive readout</strong> and architect deep dive</li>
+                </ul>
+                <p><strong>Typical shape:</strong> 2 to 3 week fixed fee per workload.</p>
+            </div>
+            <div class="reveal text-center">
+                <span class="icon-tile" style="width:120px;height:120px;font-size:3rem"><i class="fas fa-scale-balanced" aria-hidden="true"></i></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<section id="governance" class="section">
+    <div class="container">
+        <div class="grid-2">
+            <div class="reveal text-center">
+                <span class="icon-tile" style="width:120px;height:120px;font-size:3rem"><i class="fas fa-gavel" aria-hidden="true"></i></span>
+            </div>
+            <div class="reveal">
+                <p class="eyebrow">04 / CAF: Govern</p>
+                <h2>Governance and Policy as Code</h2>
+                <p class="lede">Guardrails that scale. Azure Policy, management groups, and tag governance delivered as code, reviewed in pull requests, and tested before they hit production.</p>
+                <p>We design a policy taxonomy aligned to Essential 8, CIS, and ISO 27001, implement it with Bicep or Terraform, and wire it into your pipelines. The result: predictable posture, no surprise drift, and audit ready evidence on day one.</p>
+                <ul>
+                    <li><strong>Policy baseline</strong>, deny and audit, with exemptions workflow</li>
+                    <li><strong>Management group</strong> design and vending</li>
+                    <li><strong>Tag and naming</strong> standards, enforced via policy</li>
+                    <li><strong>Compliance reporting</strong>, Azure Policy and Defender</li>
+                    <li><strong>Remediation pipelines</strong> with safe rollouts</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<section id="security" class="section">
+    <div class="container">
+        <div class="grid-2">
+            <div class="reveal">
+                <p class="eyebrow">05 / CAF: Secure</p>
+                <h2>Security, Sovereign and IRAP Readiness</h2>
+                <p class="lede">Defence in depth designed around Microsoft's Secure methodology and the Australian Signals Directorate Essential 8.</p>
+                <p>We assess posture, close the gaps, and operationalise detection with Defender for Cloud and Sentinel. For regulated workloads we prepare the environment and documentation for IRAP assessment (PROTECTED) or ISM aligned delivery.</p>
+                <ul>
+                    <li><strong>Posture assessment</strong>, Secure Score and Defender baseline</li>
+                    <li><strong>Identity hardening</strong>, Entra ID, PIM, Conditional Access, phishing resistant MFA</li>
+                    <li><strong>Threat protection</strong>, Defender XDR, Sentinel SIEM and SOAR</li>
+                    <li><strong>Data protection</strong>, Purview, Key Vault, customer managed keys</li>
+                    <li><strong>Essential 8</strong> and <strong>IRAP readiness</strong> uplift</li>
+                </ul>
+            </div>
             <div class="reveal text-center">
                 <span class="icon-tile" style="width:120px;height:120px;font-size:3rem"><i class="fas fa-shield-halved" aria-hidden="true"></i></span>
             </div>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<section id="platform-engineering" class="section">
+    <div class="container">
+        <div class="grid-2">
+            <div class="reveal text-center">
+                <span class="icon-tile" style="width:120px;height:120px;font-size:3rem"><i class="fas fa-gears" aria-hidden="true"></i></span>
+            </div>
             <div class="reveal">
-                <p class="eyebrow">02 — Security</p>
-                <h2>Security Solutions</h2>
-                <p class="lede">Defence-in-depth designed around the Azure security reference architecture.</p>
-                <p>We map your posture against CIS/NIST/ISO benchmarks, design an architecture that closes the gaps, and operationalise it with automation.</p>
+                <p class="eyebrow">06 / WAF: Operational Excellence</p>
+                <h2>Platform Engineering and IaC</h2>
+                <p class="lede">Golden paths that make the secure option the easy option. Bicep or Terraform, Azure Verified Modules, and GitHub Actions pipelines that every team can ride.</p>
+                <p>We build the internal developer platform: reusable modules, opinionated templates, environment promotion, and automated compliance. Teams get production grade foundations on day one, instead of reinventing them per project.</p>
                 <ul>
-                    <li><strong>Posture Assessment</strong> — Defender / Secure Score / policy audit</li>
-                    <li><strong>Identity Hardening</strong> — Entra ID, Conditional Access, PIM</li>
-                    <li><strong>Threat Protection</strong> — Defender for Cloud, Sentinel SIEM/SOAR</li>
-                    <li><strong>Data Protection</strong> — Key Vault, encryption, DLP</li>
-                    <li><strong>Compliance</strong> — Azure Policy + Blueprints for regulated workloads</li>
+                    <li><strong>IaC codebase</strong>, Bicep or Terraform, AVM aligned</li>
+                    <li><strong>Module library</strong> and pattern catalogue</li>
+                    <li><strong>CI/CD pipelines</strong>, GitHub Actions or Azure DevOps</li>
+                    <li><strong>Environment promotion</strong> with What-If and Pester gates</li>
+                    <li><strong>Developer self service</strong>, subscription and workload vending</li>
                 </ul>
             </div>
         </div>
@@ -62,24 +206,152 @@ description: Azure and cloud consulting services — migration, security, DevOps
 
 <hr class="section-divider">
 
-<section id="devops-automation" class="section">
+<section id="finops" class="section">
     <div class="container">
         <div class="grid-2">
             <div class="reveal">
-                <p class="eyebrow">03 — DevOps</p>
-                <h2>DevOps &amp; Automation</h2>
-                <p class="lede">Platforms that ship software fast, safely, and repeatedly.</p>
-                <p>Infrastructure as Code, CI/CD pipelines, and golden-path patterns so every team in your org gets the same production-grade foundations.</p>
+                <p class="eyebrow">07 / WAF: Cost Optimisation</p>
+                <h2>FinOps and Cost Optimisation</h2>
+                <p class="lede">Real savings, not spreadsheet theatre. We use the FinOps Foundation framework and Microsoft Cost Management to find waste, right size workloads, and put controls in place so spend stays honest.</p>
+                <p>Past engagements have recovered material savings on Azure estates through reservation and savings plan strategy, rightsizing, storage tiering, dev and test automation, and tagging hygiene. Includes an ongoing FinOps cadence if you want it to stick.</p>
                 <ul>
-                    <li><strong>DevOps Assessment</strong> — current-state + target-state gap analysis</li>
-                    <li><strong>IaC Implementation</strong> — Bicep or Terraform, AVM-aligned</li>
-                    <li><strong>CI/CD Pipelines</strong> — GitHub Actions or Azure DevOps, with environment promotion</li>
-                    <li><strong>Observability</strong> — Azure Monitor, Log Analytics, workbooks</li>
-                    <li><strong>Platform Engineering</strong> — golden paths and self-service tooling</li>
+                    <li><strong>Cost discovery</strong> and anomaly detection</li>
+                    <li><strong>Reservation and savings plan</strong> strategy</li>
+                    <li><strong>Rightsizing and scheduling</strong> across compute and data</li>
+                    <li><strong>Showback and chargeback</strong> via tags and budgets</li>
+                    <li><strong>FinOps operating model</strong>, roles and rituals</li>
                 </ul>
             </div>
             <div class="reveal text-center">
-                <span class="icon-tile" style="width:120px;height:120px;font-size:3rem"><i class="fas fa-gears" aria-hidden="true"></i></span>
+                <span class="icon-tile" style="width:120px;height:120px;font-size:3rem"><i class="fas fa-coins" aria-hidden="true"></i></span>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<section id="modern-workplace" class="section">
+    <div class="container">
+        <div class="grid-2">
+            <div class="reveal text-center">
+                <span class="icon-tile" style="width:120px;height:120px;font-size:3rem"><i class="fas fa-desktop" aria-hidden="true"></i></span>
+            </div>
+            <div class="reveal">
+                <p class="eyebrow">08 / CAF: Adopt</p>
+                <h2>Modern Workplace and AVD</h2>
+                <p class="lede">Azure Virtual Desktop, Windows 365, Intune, and Entra designed as one platform so your people get fast, secure, device independent access.</p>
+                <p>Landing zone aligned AVD builds, FSLogix profiles, image factory pipelines, and Conditional Access baselines. For regulated estates we harden the whole stack against Essential 8 and ISM.</p>
+                <ul>
+                    <li><strong>AVD landing zone</strong>, personal and pooled host pools</li>
+                    <li><strong>Image factory</strong> via Azure Image Builder</li>
+                    <li><strong>Intune baselines</strong> and app deployment</li>
+                    <li><strong>Zero trust</strong> access, Entra ID and Conditional Access</li>
+                    <li><strong>Cost controls</strong>, scaling plans and reservations</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+<section id="ai-enablement" class="section">
+    <div class="container">
+        <div class="grid-2">
+            <div class="reveal">
+                <p class="eyebrow">09 / CAF: Adopt (AI)</p>
+                <h2>Modern AI Enablement</h2>
+                <p class="lede">A governed, multi vendor AI platform and the productivity layer that actually pays for itself.</p>
+                <p>We stand up Azure AI Foundry as your single governance surface for every model (Azure OpenAI, Claude, open weights) and every agent, then roll out GitHub Copilot and Claude Code to your engineers and Microsoft 365 Copilot to the rest of the business. You get sovereignty, auditability, and a measured ROI model that your CFO will actually sign off on, in 90 days.</p>
+                <ul>
+                    <li><strong>Azure AI Foundry platform</strong>, Bicep deployed, Foundry Agent Service, MCP registry, private networking, Entra per agent identity</li>
+                    <li><strong>Multi model choice</strong>, Azure OpenAI, Claude (Anthropic) and open weight models through Foundry, one policy surface</li>
+                    <li><strong>Developer velocity</strong>, GitHub Copilot agent mode and Claude Code for Enterprise, with spend caps, audit and a measured baseline</li>
+                    <li><strong>Knowledge worker rollout</strong>, Microsoft 365 Copilot readiness (Purview, sensitivity labels) and use case clinics</li>
+                    <li><strong>Responsible AI and Essential 8</strong>, risk register, red teaming, prompt injection testing, Sentinel logging, AU Assurance Framework mapping</li>
+                </ul>
+            </div>
+            <div class="reveal text-center">
+                <span class="icon-tile" style="width:120px;height:120px;font-size:3rem"><i class="fas fa-brain" aria-hidden="true"></i></span>
+            </div>
+        </div>
+
+        <div class="reveal" style="margin-top:3rem;padding:2rem;border:1px solid rgba(255,255,255,0.08);border-radius:12px;background:var(--accent-glow-soft)">
+            <p class="eyebrow">Interactive</p>
+            <h3 style="margin-top:0.25rem">Modern AI Enablement ROI calculator</h3>
+            <p style="color:var(--muted,#9aa4b2);margin-bottom:1.5rem">A quick estimate of what GitHub Copilot and Claude Code, delivered with a real measurement baseline, could return in year one. Tweak the inputs.</p>
+
+            <div class="grid-2" style="gap:2rem;align-items:start">
+                <div>
+                    <label for="roi-devs" style="display:block;margin-bottom:0.25rem;font-weight:600">Number of engineers</label>
+                    <input id="roi-devs" type="number" min="1" value="40" style="width:100%;padding:0.6rem;background:#0d1117;border:1px solid #30363d;border-radius:6px;color:inherit;font:inherit">
+
+                    <label for="roi-salary" style="display:block;margin:1rem 0 0.25rem;font-weight:600">Fully loaded cost per engineer (A$ per year)</label>
+                    <input id="roi-salary" type="number" min="0" step="5000" value="185000" style="width:100%;padding:0.6rem;background:#0d1117;border:1px solid #30363d;border-radius:6px;color:inherit;font:inherit">
+
+                    <label for="roi-uplift" style="display:block;margin:1rem 0 0.25rem;font-weight:600">Productivity uplift you expect</label>
+                    <select id="roi-uplift" style="width:100%;padding:0.6rem;background:#0d1117;border:1px solid #30363d;border-radius:6px;color:inherit;font:inherit">
+                        <option value="0.10">Conservative (10%)</option>
+                        <option value="0.18" selected>Realistic (18%)</option>
+                        <option value="0.30">Measured high performer (30%)</option>
+                    </select>
+
+                    <label for="roi-kw" style="display:block;margin:1rem 0 0.25rem;font-weight:600">Knowledge workers on M365 Copilot</label>
+                    <input id="roi-kw" type="number" min="0" value="200" style="width:100%;padding:0.6rem;background:#0d1117;border:1px solid #30363d;border-radius:6px;color:inherit;font:inherit">
+
+                    <label for="roi-kwcost" style="display:block;margin:1rem 0 0.25rem;font-weight:600">Fully loaded cost per knowledge worker (A$ per year)</label>
+                    <input id="roi-kwcost" type="number" min="0" step="5000" value="120000" style="width:100%;padding:0.6rem;background:#0d1117;border:1px solid #30363d;border-radius:6px;color:inherit;font:inherit">
+                </div>
+
+                <div style="padding:1.5rem;background:#0d1117;border:1px solid #30363d;border-radius:8px">
+                    <p class="eyebrow" style="margin:0">Year 1 estimate</p>
+                    <h2 id="roi-total" style="margin:0.25rem 0 1rem;color:var(--accent);font-size:2.4rem">A$0</h2>
+
+                    <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid #1f2937">
+                        <span>Engineering productivity value</span><strong id="roi-eng">A$0</strong>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid #1f2937">
+                        <span>Knowledge worker value</span><strong id="roi-know">A$0</strong>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid #1f2937">
+                        <span>Licence cost (Copilot + Claude + M365)</span><strong id="roi-lic">A$0</strong>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:0.5rem 0;border-bottom:1px solid #1f2937">
+                        <span>TDC engagement (Tier 2)</span><strong>A$145,000</strong>
+                    </div>
+                    <div style="display:flex;justify-content:space-between;padding:0.75rem 0 0;font-size:1.1rem">
+                        <span><strong>Net year 1</strong></span><strong id="roi-net" style="color:var(--accent)">A$0</strong>
+                    </div>
+                    <p style="margin:1rem 0 0;font-size:0.8rem;color:var(--muted,#9aa4b2)">Assumes: engineer uplift applied to 70% of capture rate. Knowledge worker uplift fixed at 8% against 30% capture. Licences at A$700 per engineer per year (GitHub Copilot Enterprise + Claude Code) and A$540 per M365 Copilot seat. Anchors only, real numbers need a baseline measurement.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<script src="/assets/js/roi-calc.js" defer></script>
+
+<hr class="section-divider">
+
+<section id="fractional-cloud-lead" class="section">
+    <div class="container">
+        <div class="grid-2">
+            <div class="reveal text-center">
+                <span class="icon-tile" style="width:120px;height:120px;font-size:3rem"><i class="fas fa-user-tie" aria-hidden="true"></i></span>
+            </div>
+            <div class="reveal">
+                <p class="eyebrow">10 / CAF: Manage</p>
+                <h2>Fractional Cloud Lead</h2>
+                <p class="lede">Principal level Azure leadership, on retainer, for organisations that need the authority without the headcount.</p>
+                <p>Architecture review, platform direction, vendor management, and executive cover. Typically booked as a fixed set of days per month, with clear outcomes and a shared backlog. Ideal for government programs and mid market firms that want senior Azure judgement on tap.</p>
+                <ul>
+                    <li><strong>Architecture authority</strong>, ADRs and design reviews</li>
+                    <li><strong>Vendor management</strong>, SI oversight and QA</li>
+                    <li><strong>Platform direction</strong>, roadmap and standards</li>
+                    <li><strong>Executive reporting</strong>, steerco and board level</li>
+                </ul>
+                <p><strong>Typical shape:</strong> Retainer, 4 to 8 days per month, quarterly review.</p>
             </div>
         </div>
     </div>
@@ -89,13 +361,14 @@ description: Azure and cloud consulting services — migration, security, DevOps
 
 <section class="section">
     <div class="container">
-        <p class="eyebrow">Additional capabilities</p>
-        <h2 class="mb-6">Also available.</h2>
+        <p class="eyebrow">Proof</p>
+        <h2 class="mb-6">Where this has shipped.</h2>
+        <p class="lede">Selected engagements across Australian enterprise, government, and regulated sectors. Full case studies in <a href="/work/">our work</a>.</p>
         <div class="grid-4">
-            <div class="card card-service reveal"><span class="icon-tile"><i class="fas fa-server" aria-hidden="true"></i></span><h3>Infrastructure Optimisation</h3><p>Cost, performance, and scalability tuning across your Azure estate.</p></div>
-            <div class="card card-service reveal"><span class="icon-tile"><i class="fas fa-database" aria-hidden="true"></i></span><h3>Data Solutions</h3><p>Azure SQL, Cosmos DB, Synapse — modern data platforms with governance built in.</p></div>
-            <div class="card card-service reveal"><span class="icon-tile"><i class="fas fa-graduation-cap" aria-hidden="true"></i></span><h3>Training &amp; Enablement</h3><p>Custom Azure training and governance workshops for your teams.</p></div>
-            <div class="card card-service reveal"><span class="icon-tile"><i class="fas fa-brain" aria-hidden="true"></i></span><h3>AI &amp; Analytics</h3><p>Azure OpenAI, Cognitive Services, and ML integrations tied to real use cases.</p></div>
+            <a href="/work/global-mining-major-application-integration/" class="card card-service reveal"><span class="icon-tile"><i class="fas fa-industry" aria-hidden="true"></i></span><h3>Mining and Resources</h3><p>112+ applications integrated into an ASX listed parent estate in 8 months, with a repeatable Bicep landing zone pattern.</p></a>
+            <a href="/work/state-health-cloud-security/" class="card card-service reveal"><span class="icon-tile"><i class="fas fa-hospital" aria-hidden="true"></i></span><h3>State Health</h3><p>Security and governance uplift across a regulated state health Azure estate, aligned to Essential 8 and ISM.</p></a>
+            <a href="/work/hospitality-operator-landing-zones/" class="card card-service reveal"><span class="icon-tile"><i class="fas fa-bed" aria-hidden="true"></i></span><h3>Hospitality and Leisure</h3><p>Landing zones and FinOps uplift for a national hospitality operator, recovering material Azure run rate.</p></a>
+            <a href="/work/human-services-identity-automation/" class="card card-service reveal"><span class="icon-tile"><i class="fas fa-hand-holding-heart" aria-hidden="true"></i></span><h3>Human Services</h3><p>Identity management assessment and automation for an NFP delivering frontline disability care.</p></a>
         </div>
     </div>
 </section>
@@ -103,10 +376,36 @@ description: Azure and cloud consulting services — migration, security, DevOps
 <section class="cta-band">
     <div class="container">
         <h2>Scope your engagement.</h2>
-        <p class="lede">Tell us what you're working on — we'll tell you how we'd approach it.</p>
+        <p class="lede">Tell us what you're working on. You'll get a CAF and WAF aligned view of how we'd approach it, plus a fixed price where possible.</p>
         <div class="cluster">
             <a href="/contact/" class="btn btn-lg">Start a conversation</a>
-            <a href="/about/" class="btn btn-secondary btn-lg">About us</a>
+            <a href="/rate-card/" class="btn btn-secondary btn-lg">See the rate card</a>
+            <a href="/offers/secure-landing-zone/" class="btn btn-secondary btn-lg">Secure Landing Zone offer</a>
         </div>
     </div>
 </section>
+
+<script>
+(function () {
+    var navLinks = document.querySelectorAll('.services-nav a');
+    if (!navLinks.length || !('IntersectionObserver' in window)) return;
+    var map = {};
+    navLinks.forEach(function (a) {
+        var id = a.getAttribute('href').slice(1);
+        map[id] = a;
+    });
+    var observer = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+            if (entry.isIntersecting) {
+                navLinks.forEach(function (a) { a.classList.remove('is-active'); });
+                var link = map[entry.target.id];
+                if (link) link.classList.add('is-active');
+            }
+        });
+    }, { rootMargin: '-40% 0px -50% 0px', threshold: 0 });
+    Object.keys(map).forEach(function (id) {
+        var el = document.getElementById(id);
+        if (el) observer.observe(el);
+    });
+})();
+</script>

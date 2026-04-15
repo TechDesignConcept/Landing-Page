@@ -2,7 +2,7 @@
 layout: post
 title: "Getting Started with Azure Verified Modules: Accelerate Your Bicep Deployments"
 date: 2025-05-01
-author: "Josh"
+author: "Joshua Argy"
 image: "/assets/imgs/avm-bicep-modules.png"
 excerpt: "Discover how Azure Verified Modules (AVM) can dramatically accelerate your Infrastructure as Code journey with production-ready Bicep templates."
 tags: [azure, bicep, avm, infrastructure-as-code, devops]
@@ -84,7 +84,7 @@ These modules align perfectly with the Cloud Adoption Framework, making enterpri
 
 ## Conclusion
 
-Azure Verified Modules represent a significant step forward in Infrastructure as Code maturity. By leveraging these production-ready modules, you can focus on what matters—delivering business value—rather than reinventing deployment patterns.
+Azure Verified Modules represent a significant step forward in Infrastructure as Code maturity. By leveraging these production-ready modules, you can focus on what matters -delivering business value -rather than reinventing deployment patterns.
 
 At Tech Design Concept, we help organisations adopt Infrastructure as Code practices using AVM and other modern tooling. If you're looking to accelerate your Azure deployments, [contact us](/contact/) to discuss how we can help.
 
