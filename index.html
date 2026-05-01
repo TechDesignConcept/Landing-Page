@@ -13,7 +13,8 @@ description: Tech Design Concept - Azure & cloud consulting, engineered by speci
                 <span class="eyebrow">Azure architecture &middot; CAF-aligned</span>
             </div>
             <h1>Engineered infrastructure.<br><em class="hero-accent">No ambiguity.</em></h1>
-            <p class="lede">Azure Landing Zones, governance frameworks, and security programs built as code and shipped to your repo. Fixed-price offers.</p>
+            <p class="lede">Azure Landing Zones, governance frameworks, and security programs built as code and shipped
+                to your repo. Fixed-price offers.</p>
             <div class="hero-tags" aria-label="Key attributes">
                 <span class="hero-tag">Bicep &middot; IaC</span>
                 <span class="hero-tag">CAF-aligned</span>
@@ -22,7 +23,7 @@ description: Tech Design Concept - Azure & cloud consulting, engineered by speci
                 <span class="hero-tag">Full handover</span>
             </div>
             <div class="hero-ctas">
-                <a href="/offers/secure-landing-zone/" class="btn btn-lg">Azure Landing Zone &mdash; A$55k fixed</a>
+                <a href="/offers/secure-landing-zone/" class="btn btn-lg">Secure Landing Zones <svg class="btn-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round" aria-label="Secure & Accelerated" role="img"><path d="M12 2.5 20 5.5 V11.5 C20 16.5 16.5 20.5 12 22 C7.5 20.5 4 16.5 4 11.5 V5.5 Z"/><path d="M13 7.5 9.5 13 H12 L11 16.5 L14.5 11 H12 Z" fill="currentColor" stroke="none"/></svg></a>
                 <a href="/rate-card/" class="btn btn-secondary btn-lg">See all pricing</a>
             </div>
         </div>
@@ -40,16 +41,20 @@ description: Tech Design Concept - Azure & cloud consulting, engineered by speci
         <p class="eyebrow">Fixed-price offers</p>
         <h2 class="mb-6">Productised. Scoped. Delivered.</h2>
         <div class="grid-2">
-            <a href="/offers/secure-landing-zone/" class="card card-service card-service--offer reveal" style="text-decoration:none;color:inherit">
+            <a href="/offers/secure-landing-zone/" class="card card-service card-service--offer reveal"
+                style="text-decoration:none;color:inherit">
                 <p class="eyebrow eyebrow--accent">Delivery &middot; A$55,000 fixed</p>
-                <h3>Secure Landing Zone</h3>
-                <p>A production-grade Azure Landing Zone built to the Cloud Adoption Framework. Delivered as Bicep in your repo in 3 weeks. Full handover to your team.</p>
+                <h3>Secure Landing Zones</h3>
+                <p>Production-grade Azure Landing Zones built to the Cloud Adoption Framework. Delivered as Bicep in
+                    your repo in 3 weeks. Full handover to your team.</p>
                 <span class="btn-ghost">See the offer <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
             </a>
-            <a href="/offers/fractional-governance-lead/" class="card card-service card-service--offer reveal" style="text-decoration:none;color:inherit">
+            <a href="/offers/fractional-governance-lead/" class="card card-service card-service--offer reveal"
+                style="text-decoration:none;color:inherit">
                 <p class="eyebrow eyebrow--accent">Retainer &middot; from A$8k/month</p>
                 <h3>Fractional Cloud Governance Lead</h3>
-                <p>Senior Azure architecture judgment on retainer. ADR review, architecture calls, strategy sessions. Three tiers, no long contracts.</p>
+                <p>Senior Azure architecture judgment on retainer. ADR review, architecture calls, strategy sessions.
+                    Three tiers, no long contracts.</p>
                 <span class="btn-ghost">Compare tiers <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
             </a>
         </div>
@@ -63,7 +68,8 @@ description: Tech Design Concept - Azure & cloud consulting, engineered by speci
         <p class="eyebrow">What we do</p>
         <h2 class="mb-6">Three core capabilities.</h2>
         <div class="grid-3">
-            <a href="/services/#caf-advisory" class="card card-service reveal" style="text-decoration:none;color:inherit">
+            <a href="/services/#caf-advisory" class="card card-service reveal"
+                style="text-decoration:none;color:inherit">
                 <span class="card-num" aria-hidden="true">01</span>
                 <h3>Cloud Migration</h3>
                 <p>Assess, plan, and execute Azure migrations that cut risk and deliver measurable outcomes.</p>
@@ -75,7 +81,8 @@ description: Tech Design Concept - Azure & cloud consulting, engineered by speci
                 <p>Defence-in-depth architectures using Defender, Sentinel, Entra, and Azure Policy.</p>
                 <span class="btn-ghost">Learn more <i class="fas fa-arrow-right" aria-hidden="true"></i></span>
             </a>
-            <a href="/services/#platform-engineering" class="card card-service reveal" style="text-decoration:none;color:inherit">
+            <a href="/services/#platform-engineering" class="card card-service reveal"
+                style="text-decoration:none;color:inherit">
                 <span class="card-num" aria-hidden="true">03</span>
                 <h3>DevOps &amp; Automation</h3>
                 <p>CI/CD, Infrastructure as Code (Bicep, Terraform), and platform engineering that scales.</p>
@@ -100,16 +107,18 @@ description: Tech Design Concept - Azure & cloud consulting, engineered by speci
                 </div>
                 <h3>{{ featured.title }}</h3>
                 <p>{{ featured.summary }}</p>
-                <a href="{{ featured.url }}" class="btn-ghost">Read the case study <i class="fas fa-arrow-right" aria-hidden="true"></i></a>
+                <a href="{{ featured.url }}" class="btn-ghost">Read the case study <i class="fas fa-arrow-right"
+                        aria-hidden="true"></i></a>
             </div>
             <div>
                 <div class="stat-row">
                     {% for m in featured.metrics %}
-                        {% assign parts = m | split: '|' %}
-                        <div class="stat">
-                            <span class="stat-number" data-count data-target="{{ parts[0] }}" data-suffix="{{ parts[1] }}">{{ parts[0] }}{{ parts[1] }}</span>
-                            <span class="stat-label">{{ parts[2] }}</span>
-                        </div>
+                    {% assign parts = m | split: '|' %}
+                    <div class="stat">
+                        <span class="stat-number" data-count data-target="{{ parts[0] }}"
+                            data-suffix="{{ parts[1] }}">{{ parts[0] }}{{ parts[1] }}</span>
+                        <span class="stat-label">{{ parts[2] }}</span>
+                    </div>
                     {% endfor %}
                 </div>
             </div>
@@ -123,10 +132,22 @@ description: Tech Design Concept - Azure & cloud consulting, engineered by speci
         <p class="eyebrow">How we work</p>
         <h2 class="mb-6">A four-step engagement.</h2>
         <div class="steps">
-            <div class="step reveal"><span class="step-num">01 &mdash; Discover</span><h3>Understand</h3><p>Deep dive into your environment, constraints, and goals.</p></div>
-            <div class="step reveal"><span class="step-num">02 &mdash; Design</span><h3>Architect</h3><p>Target-state architecture and a staged migration plan.</p></div>
-            <div class="step reveal"><span class="step-num">03 &mdash; Implement</span><h3>Deliver</h3><p>Hands-on-keyboard execution with continuous validation.</p></div>
-            <div class="step reveal"><span class="step-num">04 &mdash; Enable</span><h3>Hand over</h3><p>Your team owns the platform, with the skills to run it.</p></div>
+            <div class="step reveal"><span class="step-num">01 &middot; Discover</span>
+                <h3>Understand</h3>
+                <p>Deep dive into your environment, constraints, and goals.</p>
+            </div>
+            <div class="step reveal"><span class="step-num">02 &middot; Design</span>
+                <h3>Architect</h3>
+                <p>Target-state architecture and a staged migration plan.</p>
+            </div>
+            <div class="step reveal"><span class="step-num">03 &middot; Implement</span>
+                <h3>Deliver</h3>
+                <p>Hands-on-keyboard execution with continuous validation.</p>
+            </div>
+            <div class="step reveal"><span class="step-num">04 &middot; Enable</span>
+                <h3>Hand over</h3>
+                <p>Your team owns the platform, with the skills to run it.</p>
+            </div>
         </div>
     </div>
 </section>
@@ -139,7 +160,7 @@ description: Tech Design Concept - Azure & cloud consulting, engineered by speci
         <h2 class="mb-6">From the blog.</h2>
         <div class="grid-3">
             {% for post in recent %}
-                {% include blog-card.html post=post %}
+            {% include blog-card.html post=post %}
             {% endfor %}
         </div>
     </div>
@@ -150,7 +171,8 @@ description: Tech Design Concept - Azure & cloud consulting, engineered by speci
     <div class="cta-band__line" aria-hidden="true"></div>
     <div class="container">
         <h2>Ready to build something well?</h2>
-        <p class="lede">Fixed-price foundation in 3 weeks, or senior judgment on retainer. Both start with a 30-minute fit call.</p>
+        <p class="lede">Fixed-price foundation in 3 weeks, or senior judgment on retainer. Both start with a 30-minute
+            fit call.</p>
         <div class="cluster">
             <a href="/contact/" class="btn btn-lg">Book the fit call</a>
             <a href="/rate-card/" class="btn btn-secondary btn-lg">See pricing</a>
