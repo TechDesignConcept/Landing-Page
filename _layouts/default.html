@@ -27,6 +27,7 @@
     <!-- X-Content-Type-Options, X-Frame-Options, and Permissions-Policy must be HTTP response headers; meta equivalents are ignored by browsers. Configure these at the CDN/proxy layer (e.g. Cloudflare Page Rules or Workers). -->
 
     {% seo title=false %}
+    {% include jsonld.html %}
 
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8V446GX4QE"></script>
@@ -45,5 +46,6 @@
     <script src="/assets/js/menu.js"></script>
     <script src="/assets/js/motion.js"></script>
     <script src="/assets/js/contact.js"></script>
+    <script src="/assets/js/analytics-events.js"></script>
 </body>
 </html>

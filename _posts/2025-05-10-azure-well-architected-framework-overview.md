@@ -2,6 +2,7 @@
 layout: post
 title: "Azure Well-Architected Framework: Building Cloud Solutions That Last"
 date: 2025-05-10
+last_modified_at: 2026-07-06
 author: "Joshua Argy"
 image: "/assets/imgs/azure-waf-pillars.png"
 excerpt: "Learn how the Azure Well-Architected Framework helps you design and operate reliable, secure, and cost-effective cloud solutions."
@@ -120,3 +121,9 @@ At Tech Design Concept, we conduct Well-Architected assessments and help organis
 ---
 
 *This is the first in a series exploring each WAF pillar in detail. Stay tuned for deep-dives into reliability, security, and more.*
+
+## Where to next
+
+- **The offer:** [Fractional Cloud Governance Lead](/offers/fractional-governance-lead/), Well-Architected reviews on retainer.
+- **The proof:** [State government: secure network foundation](/work/state-government-secure-network/).
+- **Related:** [Cloud Adoption Framework landing zones](/blog/cloud-adoption-framework-landing-zones/).

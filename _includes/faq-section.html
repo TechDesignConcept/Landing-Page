@@ -1,0 +1,14 @@
+<section class="section">
+    <div class="container">
+        <p class="eyebrow">Questions we get</p>
+        <h2 class="mb-6">Straight answers.</h2>
+        <div class="grid-2">
+            {% for faq in page.faqs %}
+            <div class="reveal">
+                <h3>{{ faq.q }}</h3>
+                <p>{{ faq.a }}</p>
+            </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>

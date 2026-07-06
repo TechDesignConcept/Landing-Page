@@ -2,6 +2,7 @@
 layout: post
 title: "Getting Started with Azure Verified Modules: Accelerate Your Bicep Deployments"
 date: 2025-05-01
+last_modified_at: 2026-07-06
 author: "Joshua Argy"
 image: "/assets/imgs/avm-bicep-modules.png"
 excerpt: "Discover how Azure Verified Modules (AVM) can dramatically accelerate your Infrastructure as Code journey with production-ready Bicep templates."
@@ -91,3 +92,9 @@ At Tech Design Concept, we help organisations adopt Infrastructure as Code pract
 ---
 
 *Interested in learning more about Bicep and AVM? Follow our blog for upcoming deep-dives into specific module implementations.*
+
+## Where to next
+
+- **The offer:** [Secure Landing Zones](/offers/secure-landing-zone/), delivered entirely as Bicep in your repo.
+- **The proof:** [Multi-region hospitality: landing zones](/work/hospitality-operator-landing-zones/).
+- **Related:** [Bicep best practices](/blog/bicep-best-practices-2025/).

@@ -1,0 +1,94 @@
+{% comment %}
+Structured data layer. Emits per-page JSON-LD driven by URL and front matter:
+  - Homepage: ProfessionalService with offer catalog
+  - /about/: Person entity for Joshua Argy (E-E-A-T anchor; posts byline to this)
+  - Any page with `offer:` front matter: Service
+  - Any page with `faqs:` front matter: FAQPage (must mirror visible content)
+JSON-LD data blocks are exempt from CSP script-src (non-executable type).
+{% endcomment %}
+{% if page.url == "/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfessionalService",
+  "name": "Tech Design Concept",
+  "legalName": "Tech Design Concept Pty Ltd",
+  "description": "Azure and cloud consulting: landing zones, governance, security, and AI enablement, engineered as code for Australian enterprise and government.",
+  "url": "https://techdesignconcept.com/",
+  "logo": "https://techdesignconcept.com/assets/imgs/android-chrome-512x512.png",
+  "email": "info@techdesignconcept.com",
+  "telephone": "+61447040424",
+  "address": { "@type": "PostalAddress", "addressLocality": "Brisbane", "addressRegion": "QLD", "addressCountry": "AU" },
+  "areaServed": { "@type": "Country", "name": "Australia" },
+  "founder": { "@type": "Person", "name": "Joshua Argy", "url": "https://techdesignconcept.com/about/" },
+  "sameAs": [
+    "https://linkedin.com/company/tech-design-concept",
+    "https://github.com/techdesignconcept"
+  ],
+  "knowsAbout": ["Azure Landing Zones", "Cloud Adoption Framework", "Azure governance", "Azure security", "Essential Eight", "Bicep", "DevSecOps", "Microsoft Copilot governance"],
+  "hasOfferCatalog": {
+    "@type": "OfferCatalog",
+    "name": "Productised offers",
+    "itemListElement": [
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Secure Landing Zones", "url": "https://techdesignconcept.com/offers/secure-landing-zone/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Fractional Cloud Governance Lead", "url": "https://techdesignconcept.com/offers/fractional-governance-lead/" } },
+      { "@type": "Offer", "itemOffered": { "@type": "Service", "name": "Modern AI Enablement", "url": "https://techdesignconcept.com/offers/modern-ai-enablement/" } }
+    ]
+  }
+}
+</script>
+{% endif %}
+{% if page.url contains "/about/" %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "@id": "https://techdesignconcept.com/about/#josh",
+  "name": "Joshua Argy",
+  "jobTitle": "Founder & Principal Engineer",
+  "url": "https://techdesignconcept.com/about/",
+  "worksFor": { "@type": "Organization", "name": "Tech Design Concept Pty Ltd", "url": "https://techdesignconcept.com/" },
+  "sameAs": [
+    "https://www.linkedin.com/in/joshuaargy"
+  ],
+  "knowsAbout": ["Microsoft Azure", "Azure Landing Zones", "Cloud governance", "Cloud security", "Infrastructure as Code", "Bicep", "FinOps", "DevSecOps"],
+  "hasCredential": [
+    { "@type": "EducationalOccupationalCredential", "name": "Microsoft Certified: Azure Solutions Architect Expert" },
+    { "@type": "EducationalOccupationalCredential", "name": "Microsoft Certified: Azure Administrator Associate" },
+    { "@type": "EducationalOccupationalCredential", "name": "Microsoft Certified: Azure Security Engineer Associate" },
+    { "@type": "EducationalOccupationalCredential", "name": "Microsoft Certified: Azure Database Administrator Associate" }
+  ]
+}
+</script>
+{% endif %}
+{% if page.offer %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": {{ page.offer.name | jsonify }},
+  "description": {{ page.offer.description | jsonify }},
+  "url": "https://techdesignconcept.com{{ page.url }}",
+  "serviceType": {{ page.offer.service_type | default: "IT consulting" | jsonify }},
+  "provider": { "@type": "Organization", "name": "Tech Design Concept Pty Ltd", "url": "https://techdesignconcept.com/" },
+  "areaServed": { "@type": "Country", "name": "Australia" }{% if page.offer.price %},
+  "offers": { "@type": "Offer", "price": {{ page.offer.price | jsonify }}, "priceCurrency": "AUD" }{% endif %}
+}
+</script>
+{% endif %}
+{% if page.faqs %}
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {% for faq in page.faqs %}{
+      "@type": "Question",
+      "name": {{ faq.q | jsonify }},
+      "acceptedAnswer": { "@type": "Answer", "text": {{ faq.a | jsonify }} }
+    }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+}
+</script>
+{% endif %}

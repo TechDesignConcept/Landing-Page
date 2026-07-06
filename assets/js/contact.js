@@ -25,6 +25,7 @@
                 }
                 form.hidden = true;
                 success.hidden = false;
+                if (typeof gtag === 'function') { gtag('event', 'generate_lead', { method: 'contact_form' }); }
                 success.scrollIntoView({ behavior: 'smooth', block: 'center' });
             });
         }).catch(function (err) {
