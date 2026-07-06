@@ -9,4 +9,3 @@ Last update: 2025-04-15
 Language: English
 Doctype: HTML5
 Technology: HTML5, CSS3, JavaScript, Jekyll, Ruby
-IDE: Visual Studio Code
