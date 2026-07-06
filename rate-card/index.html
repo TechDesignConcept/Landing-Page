@@ -2,6 +2,15 @@
 layout: default
 title: Rate Card
 description: Transparent pricing for Azure consulting. Fixed-price offers first, day rates for bespoke work. No "contact us for pricing".
+faqs:
+  - q: "Are the prices GST inclusive?"
+    a: "No. All prices are ex GST, invoiced fortnightly. Fixed-price offers invoice on their own milestones."
+  - q: "Is there a minimum engagement?"
+    a: "Yes. Strategic advisory has a 1-day minimum; principal architect work has a 5-day minimum. There is no hourly billing at all."
+  - q: "Should we take a productised offer or day rates?"
+    a: "If your engagement fits a productised offer, take it: clearer scope, fixed price, more value. Day rates are the escape hatch for work that genuinely doesn't fit a package."
+  - q: "How do we start?"
+    a: "Book a 30-minute fit call. We'll tell you which offer or day-rate engagement fits, or point you somewhere else if we're not the right call."
 ---
 
 <section class="page-header">
@@ -16,7 +25,7 @@ description: Transparent pricing for Azure consulting. Fixed-price offers first,
     <div class="container">
         <p class="eyebrow">Start here</p>
         <h2 class="mb-6">Productised offers.</h2>
-        <div class="grid-2">
+        <div class="grid-3">
             <div class="card card-service reveal">
                 <p class="eyebrow">Delivery</p>
                 <h3>Secure Landing Zones</h3>
@@ -30,6 +39,13 @@ description: Transparent pricing for Azure consulting. Fixed-price offers first,
                 <p class="lede">A$8,000 – A$18,000 / month</p>
                 <p>Senior Azure architecture judgment on retainer. Three tiers - Advisor, Partner, Embedded. ADR review, architecture calls, strategy sessions. 3-month minimum, then month-to-month.</p>
                 <p><a href="/offers/fractional-governance-lead/" class="btn">Compare tiers</a></p>
+            </div>
+            <div class="card card-service reveal">
+                <p class="eyebrow">Platform</p>
+                <h3>Modern AI Enablement</h3>
+                <p class="lede">Fixed-fee tiers &middot; 90 days</p>
+                <p>A governed, production-grade AI platform on Azure: AI Foundry landing zone, GitHub Copilot and Claude Code enablement with measured baselines, M365 Copilot readiness, and an Essential Eight-aligned governance pack. Tiers scoped on the fit call.</p>
+                <p><a href="/offers/modern-ai-enablement/" class="btn">See the offer</a></p>
             </div>
         </div>
     </div>
@@ -88,6 +104,10 @@ description: Transparent pricing for Azure consulting. Fixed-price offers first,
         </div>
     </div>
 </section>
+
+{% include faq-section.html %}
+
+<hr class="section-divider">
 
 <section class="cta-band">
     <div class="container">
