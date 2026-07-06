@@ -1,5 +1,6 @@
 <a class="card card-post reveal" href="{{ include.post.url }}">
     <div class="card-post-banner">
+        {% if include.post.image %}<img class="card-post-thumb" src="{{ include.post.image }}" alt="" loading="lazy" decoding="async">{% endif %}
         <h3>{{ include.post.title }}</h3>
     </div>
     <div class="card-post-body">
