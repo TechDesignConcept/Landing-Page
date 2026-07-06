@@ -1,6 +1,5 @@
 # robots.txt for techdesignconcept.com
 User-agent: *
 Allow: /
-Disallow: /howto/
 
 Sitemap: https://techdesignconcept.com/sitemap.xml

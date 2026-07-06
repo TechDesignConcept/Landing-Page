@@ -39,6 +39,14 @@ exclude:
   - .sass-cache/
   - .jekyll-cache/
   - .jekyll-metadata
+  # Internal working files: never publish even if present in a local build
+  - docs/
+  - graphify-out/
+  - skills-pack/
+  - .claude/
+  - .superpowers/
+  - CLAUDE.md
+  - CLAUDE.local.md
 
 # Default front matter
 defaults:

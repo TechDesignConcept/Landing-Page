@@ -302,33 +302,4 @@ description: Privacy policy for Tech Design Concept.
   </div>
 </section>
 
-<script>
-  (function () {
-    var links = document.querySelectorAll('.privacy-toc a');
-    var sections = Array.from(links).map(function (a) {
-      return document.querySelector(a.getAttribute('href'));
-    }).filter(Boolean);
-
-    function onScroll() {
-      var pos = window.scrollY + 140;
-      var current = sections[0];
-      sections.forEach(function (s) { if (s.offsetTop <= pos) current = s; });
-      links.forEach(function (a) {
-        a.classList.toggle('active', a.getAttribute('href') === '#' + current.id);
-      });
-    }
-    document.addEventListener('scroll', onScroll, { passive: true });
-    onScroll();
-
-    links.forEach(function (a) {
-      a.addEventListener('click', function (e) {
-        var target = document.querySelector(a.getAttribute('href'));
-        if (target) {
-          e.preventDefault();
-          window.scrollTo({ top: target.offsetTop - 90, behavior: 'smooth' });
-          history.pushState(null, '', a.getAttribute('href'));
-        }
-      });
-    });
-  })();
-</script>
+<script src="/assets/js/privacy-toc.js" defer></script>
