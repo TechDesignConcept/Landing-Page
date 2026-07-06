@@ -11,7 +11,10 @@ Options -Indexes
 </FilesMatch>
 
 
-# Security headers. GitHub Pages ignores this file; these directives apply
+# Security headers. Content-Security-Policy is deliberately NOT set here or
+# at the CDN; it lives in the meta tag in _layouts/default.html. Setting a
+# second CSP creates an intersection policy and breaks the site.
+# GitHub Pages ignores this file; these directives apply
 # only if the site is ever served by Apache. Until then, set these same
 # headers at the CDN/proxy layer (e.g. Cloudflare) in front of GitHub Pages.
 <IfModule mod_headers.c>

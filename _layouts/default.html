@@ -18,8 +18,11 @@
     <link rel="stylesheet" href="/assets/css/main.css">
     <link rel="alternate" type="application/atom+xml" title="{{ site.title }} Feed" href="/feed.xml" />
 
-    <!-- Security headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; font-src 'self' https://cdnjs.cloudflare.com; connect-src 'self' https://formspree.io https://www.google-analytics.com; base-uri 'self'; form-action https://formspree.io; object-src 'none'; upgrade-insecure-requests;">
+    <!-- Security headers. This meta tag is the single source of truth for CSP.
+         Do not also set a Content-Security-Policy response header at the CDN:
+         browsers enforce the intersection of all policies, so a second, stale
+         policy silently breaks fonts, analytics, and the contact form. -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com https://www.google-analytics.com https://static.cloudflareinsights.com; style-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com; img-src 'self' data: https://www.googletagmanager.com https://www.google-analytics.com; font-src 'self' https://cdnjs.cloudflare.com; connect-src 'self' https://formspree.io https://www.google-analytics.com https://cloudflareinsights.com; base-uri 'self'; form-action https://formspree.io; object-src 'none'; upgrade-insecure-requests;">
     <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
     <!-- X-Content-Type-Options, X-Frame-Options, and Permissions-Policy must be HTTP response headers; meta equivalents are ignored by browsers. Configure these at the CDN/proxy layer (e.g. Cloudflare Page Rules or Workers). -->
 

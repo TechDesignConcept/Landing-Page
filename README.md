@@ -23,12 +23,12 @@ The website follows a standard Jekyll structure:
 - **Modern UI**: Clean, professional interface with Azure-inspired aesthetics
 - **Performance Optimised**: Fast loading with optimised assets
 - **SEO Ready**: Structured for search engine visibility
-- **Security Enhanced**: Content-Security-Policy and Referrer-Policy are
-  enforced via `<meta>` tags in the page head. Framing, MIME-sniffing, HSTS
-  and Permissions-Policy protections need real HTTP response headers, which
-  GitHub Pages cannot set; set X-Frame-Options, X-Content-Type-Options,
-  Strict-Transport-Security and Permissions-Policy at a CDN/proxy layer
-  (e.g. Cloudflare) in front of the site.
+- **Security Enhanced**: Content-Security-Policy is enforced via the `<meta>`
+  tag in `_layouts/default.html` and must live only there (a second CSP set
+  at the CDN intersects with it and breaks the site). The remaining headers
+  (Strict-Transport-Security, X-Frame-Options, X-Content-Type-Options,
+  Permissions-Policy, Referrer-Policy) are HTTP response headers set at the
+  Cloudflare layer in front of GitHub Pages.
 
 ## Technologies
 
