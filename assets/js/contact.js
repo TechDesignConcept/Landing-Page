@@ -30,7 +30,7 @@
         }).catch(function (err) {
             if (submitBtn) { submitBtn.disabled = false; submitBtn.textContent = originalBtnLabel; }
             console.error('Contact form submit failed:', err);
-            alert('Sorry — something went wrong (' + (err && err.message ? err.message : 'unknown') + '). Please email info@techdesignconcept.com directly.');
+            alert('Sorry, something went wrong sending your message. Please email info@techdesignconcept.com directly.');
         });
     });
 })();

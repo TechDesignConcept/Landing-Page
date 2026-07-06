@@ -1,4 +1,4 @@
-# Apache configuration — not processed by GitHub Pages.
+# Apache configuration: not processed by GitHub Pages.
 # Apply equivalent rules at the CDN/proxy layer (e.g. Cloudflare) for production.
 
 # Deny directory listings
@@ -9,3 +9,15 @@ Options -Indexes
     Order allow,deny
     Deny from all
 </FilesMatch>
+
+
+# Security headers. GitHub Pages ignores this file; these directives apply
+# only if the site is ever served by Apache. Until then, set these same
+# headers at the CDN/proxy layer (e.g. Cloudflare) in front of GitHub Pages.
+<IfModule mod_headers.c>
+    Header always set X-Content-Type-Options "nosniff"
+    Header always set X-Frame-Options "DENY"
+    Header always set Referrer-Policy "strict-origin-when-cross-origin"
+    Header always set Permissions-Policy "camera=(), microphone=(), geolocation=(), payment=()"
+    Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains"
+</IfModule>
