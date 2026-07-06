@@ -2,6 +2,7 @@
 layout: post
 title: "Microsoft Defender for Cloud: Securing Your Azure Workloads"
 date: 2025-07-01
+last_modified_at: 2026-07-06
 author: "Joshua Argy"
 image: "/assets/imgs/defender-for-cloud.png"
 excerpt: "Explore how Microsoft Defender for Cloud provides comprehensive security posture management and threat protection for your Azure environment."
@@ -165,3 +166,9 @@ At Tech Design Concept, we help organisations implement comprehensive security s
 ---
 
 *Want to dive deeper? Our upcoming post will cover integrating Defender for Cloud with Microsoft Sentinel for advanced threat detection.*
+
+## Where to next
+
+- **The offer:** [Secure Landing Zones](/offers/secure-landing-zone/), with Defender and Sentinel wiring as an add-on.
+- **The proof:** [State health: cloud security uplift](/work/state-health-cloud-security/).
+- **Related:** [Five practices for securing your Azure environment](/blog/5-best-practices-for-securing-your-azure-environment/).

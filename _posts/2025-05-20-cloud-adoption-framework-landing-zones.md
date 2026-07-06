@@ -2,6 +2,7 @@
 layout: post
 title: "Azure Landing Zones: Your Foundation for Enterprise Cloud Adoption"
 date: 2025-05-20
+last_modified_at: 2026-07-06
 author: "Joshua Argy"
 image: "/assets/imgs/azure-landing-zones.png"
 excerpt: "Understand how Azure Landing Zones from the Cloud Adoption Framework provide a scalable, secure foundation for enterprise workloads."
@@ -122,3 +123,9 @@ At Tech Design Concept, we help organisations design and implement Landing Zones
 ---
 
 *Next in this series: Deep-diving into networking design decisions for Azure Landing Zones.*
+
+## Where to next
+
+- **The offer:** [Secure Landing Zones](/offers/secure-landing-zone/), a CAF-aligned foundation in three weeks at a fixed price.
+- **The proof:** [Multi-region hospitality: landing zones](/work/hospitality-operator-landing-zones/).
+- **Related:** [What VSA6 means for APS Azure delivery](/blog/what-vsa6-means-for-aps-azure-delivery/).

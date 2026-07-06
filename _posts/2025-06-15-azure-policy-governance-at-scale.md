@@ -2,6 +2,7 @@
 layout: post
 title: "Azure Policy: Implementing Governance at Scale"
 date: 2025-06-15
+last_modified_at: 2026-07-06
 author: "Joshua Argy"
 image: "/assets/imgs/azure-policy-governance.png"
 excerpt: "Learn how to use Azure Policy effectively to enforce compliance, prevent misconfigurations, and maintain governance across your Azure estate."
@@ -157,3 +158,9 @@ At Tech Design Concept, we help organisations design and implement Azure governa
 ---
 
 *Next up: Implementing tagging strategies that actually work in enterprise environments.*
+
+## Where to next
+
+- **The offer:** [Secure Landing Zones](/offers/secure-landing-zone/), including a policy baseline that passes audit.
+- **The proof:** [State government: secure network foundation](/work/state-government-secure-network/).
+- **Related:** [What VSA6 means for APS Azure delivery](/blog/what-vsa6-means-for-aps-azure-delivery/).

@@ -2,6 +2,7 @@
 layout: post
 title: "Bicep Best Practices in 2025: Writing Production-Ready Infrastructure Code"
 date: 2025-06-01
+last_modified_at: 2026-07-06
 author: "Joshua Argy"
 image: "/assets/imgs/bicep-best-practices.png"
 excerpt: "Master the latest Bicep best practices to write cleaner, more maintainable Infrastructure as Code for your Azure deployments."
@@ -240,3 +241,9 @@ At Tech Design Concept, we help organisations establish Infrastructure as Code s
 ---
 
 *Want hands-on help with your Bicep templates? We offer code reviews and training sessions tailored to your team's needs.*
+
+## Where to next
+
+- **The offer:** [Secure Landing Zones](/offers/secure-landing-zone/), the fixed-price foundation shipped as Bicep.
+- **The proof:** [Multi-region hospitality: landing zones](/work/hospitality-operator-landing-zones/).
+- **Related:** [Getting started with Azure Verified Modules](/blog/getting-started-with-azure-verified-modules/).

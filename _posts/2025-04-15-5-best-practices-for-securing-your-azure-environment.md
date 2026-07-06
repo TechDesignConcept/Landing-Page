@@ -2,6 +2,7 @@
 layout: post
 title: "5 Best Practices for Securing Your Azure Environment"
 date: 2025-04-15
+last_modified_at: 2026-07-06
 author: "Joshua Argy"
 image: "/assets/imgs/a55cd087-202e-482d-a8dd-2e5c4cd13b79.png"
 excerpt: "Learn the essential security practices to protect your Azure cloud environment from evolving threats."
@@ -86,3 +87,9 @@ At Tech Design Concept, we specialise in helping organisations implement robust 
 ---
 
 *This article is part of our series on cloud security best practices. Stay tuned for more insights on protecting your cloud environment.*
+
+## Where to next
+
+- **The offer:** [Secure Landing Zones](/offers/secure-landing-zone/), a governed foundation with Defender and Sentinel wiring available as an add-on.
+- **The proof:** [State health: cloud security uplift](/work/state-health-cloud-security/).
+- **Related:** [Defender for Cloud: securing Azure workloads](/blog/defender-for-cloud-securing-azure-workloads/).

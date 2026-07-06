@@ -1,0 +1,20 @@
+# Requests a GitHub Pages build once a day so future-dated Jekyll posts
+# publish on schedule without needing a manual push. GitHub Pages native
+# builds only trigger on push; this cron closes that gap.
+name: Daily Pages build
+on:
+  schedule:
+    - cron: "0 20 * * *" # 20:00 UTC = 06:00 AEST
+  workflow_dispatch: {}
+
+permissions:
+  pages: write
+
+jobs:
+  request-build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Request Pages build of latest main
+        run: gh api -X POST "repos/${GITHUB_REPOSITORY}/pages/builds"
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}

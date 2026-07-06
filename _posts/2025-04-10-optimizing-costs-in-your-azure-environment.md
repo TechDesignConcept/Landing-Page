@@ -2,6 +2,7 @@
 layout: post
 title: "Optimising Costs in Your Azure Environment: 7 Practical Tips"
 date: 2025-04-10
+last_modified_at: 2026-07-06
 author: "Joshua Argy"
 image: "/assets/imgs/495292b3-8c8f-42af-a3b7-7e219413277c.png"
 excerpt: "Discover proven strategies to optimise your Azure cloud costs without compromising performance or security."
@@ -110,3 +111,9 @@ At Tech Design Concept, we help organisations optimise their Azure environments 
 ---
 
 *Want to learn more about cloud cost optimisation? Check out our upcoming webinar on Azure cost management best practices.*
+
+## Where to next
+
+- **The offer:** [Fractional Cloud Governance Lead](/offers/fractional-governance-lead/), senior FinOps and architecture judgment on retainer.
+- **The proof:** [Global mining major: application integration](/work/global-mining-major-application-integration/).
+- **Related:** [Azure Well-Architected Framework overview](/blog/azure-well-architected-framework-overview/).
